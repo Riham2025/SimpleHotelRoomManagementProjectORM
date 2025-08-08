@@ -13,6 +13,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public int RoomId { get; set; } // Unique identifier for the room
 
         [Required] // Cannot be null
-        public string RoomNumber { get; set; }
+        public string RoomNumber { get; set; }// Room number (e.g., "101", "102")
     }
 }
