@@ -48,7 +48,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Delete a room by ID
         public void DeleteRoom(int id) // Delete a room from the database by its ID
         {
-            var room = _context.Rooms.FirstOrDefault(r => r.RoomId == id);
+            var room = _context.Rooms.FirstOrDefault(r => r.RoomId == id); // Retrieve the room with the specified ID from the Rooms table
             if (room != null)
             {
                 _context.Rooms.Remove(room);
