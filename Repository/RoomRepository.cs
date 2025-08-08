@@ -52,7 +52,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             if (room != null) // Check if the room exists before attempting to delete it
             {
                 _context.Rooms.Remove(room); // Remove the room from the Rooms table
-                _context.SaveChanges();
+                _context.SaveChanges(); // Save the changes to the database
             }
         }
 
