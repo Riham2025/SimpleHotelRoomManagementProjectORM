@@ -13,7 +13,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public int GuestId { get; set; } // Unique identifier for the guest
 
         [Required] // Cannot be null
-        [MaxLength(50)]
+        [MaxLength(50)] // Maximum length for the name
         public string Name { get; set; }
 
     }
