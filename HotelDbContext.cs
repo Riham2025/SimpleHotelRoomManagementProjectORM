@@ -28,11 +28,18 @@ namespace SimpleHotelRoomManagementProjectORM
             // RoomNumber is required and limited to 10 characters, and made unique
             modelBuilder.Entity<Room>()
                         .Property(r => r.RoomNumber)
-                        .IsRequired()
+                        .IsRequired() 
                         .HasMaxLength(10); 
             modelBuilder.Entity<Room>()
                         .HasIndex(r => r.RoomNumber)
                         .IsUnique(); // RoomNumber must be unique
+
+
+            // Configure Guest entity: Name is required with a max length of 50
+            modelBuilder.Entity<Guest>()
+                        .Property(g => g.Name)
+                        .IsRequired()
+                        .HasMaxLength(50);
 
         }
     }
