@@ -52,5 +52,14 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             _context.SaveChanges();
         }
 
+        // Update an existing guest
+        public void UpdateGuest(Guest guest)
+        {
+            
+            _context.Guests.Update(guest);
+           
+            _context.SaveChanges();
+        }
+
     }
 }
