@@ -26,7 +26,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public List<Guest> GetAllGuests()
         {
             
-            return _context.Guests.ToList();
+            return _context.Guests.ToList(); // Get all guests from the Guests table
         }
 
     }
