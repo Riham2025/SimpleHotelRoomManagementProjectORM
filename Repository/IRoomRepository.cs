@@ -2,6 +2,7 @@
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
+    //// Interface to define the contract for Room repository operations
     public interface IRoomRepository
     {
         void AddRoom(Room room);
