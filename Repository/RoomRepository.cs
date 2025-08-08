@@ -45,5 +45,16 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             _context.SaveChanges(); // Save the changes to the database
         }
 
+        // Delete a room by ID
+        public void DeleteRoom(int id)
+        {
+            var room = _context.Rooms.FirstOrDefault(r => r.RoomId == id);
+            if (room != null)
+            {
+                _context.Rooms.Remove(room);
+                _context.SaveChanges();
+            }
+        }
+
     }
 }
