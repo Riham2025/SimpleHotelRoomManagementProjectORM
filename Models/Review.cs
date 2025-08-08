@@ -17,6 +17,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Required] // Cannot be null
         [Range(1, 5)]   // Enforce rating between 1 and 5
-        public int Rating { get; set; }
+        public int Rating { get; set; } // Rating given by the guest
     }
 }
