@@ -14,5 +14,9 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Required] // Cannot be null
         public int GuestId { get; set; } // Foreign key to the Guest table
+
+        [Required] // Cannot be null
+        [Range(1, 5)]   // Enforce rating between 1 and 5
+        public int Rating { get; set; }
     }
 }
