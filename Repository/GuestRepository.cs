@@ -48,7 +48,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         {
             
             _context.Guests.Add(guest);
-           
+            // Commit the pending change to the database (INSERT)
             _context.SaveChanges();
         }
 
