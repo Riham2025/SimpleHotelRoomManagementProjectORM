@@ -29,5 +29,12 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Guests.ToList(); // Get all guests from the Guests table
         }
 
+        // Retrieve a guest by its primary key (GuestId)
+        public Guest GetGuestById(int id)
+        {
+           
+            return _context.Guests.FirstOrDefault(g => g.GuestId == id);
+        }
+
     }
 }
