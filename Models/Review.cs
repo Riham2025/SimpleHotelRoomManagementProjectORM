@@ -20,5 +20,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public int Rating { get; set; } // Rating given by the guest
 
         public string Comment { get; set; } // Optional comment from the guest
+
+        public Guest Guest { get; set; } // Associated guest who wrote the review
     }
 }
