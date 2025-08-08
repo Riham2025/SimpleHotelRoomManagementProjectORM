@@ -5,8 +5,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     // Interface that defines all operations allowed on the Guest entity
     public interface IGuestRepository
     {
-        void AddGuest(Guest guest); // Return all guests from the database
-        void DeleteGuest(int id);
+        void AddGuest(Guest guest); // Add a new guest
+        void DeleteGuest(int id); 
         List<Guest> GetAllGuests();
         Guest GetGuestByEmail(string email);
         Guest GetGuestById(int id);
