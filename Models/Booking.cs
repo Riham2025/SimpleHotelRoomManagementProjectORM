@@ -22,5 +22,9 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public int Nights { get; set; } // Number of nights booked
 
         public DateTime BookingDate { get; set; } = DateTime.Now; // Date of booking, defaults to now
+
+        // Navigation properties
+        public Room Room { get; set; }
+        public Guest Guest { get; set; }
     }
 }
