@@ -40,7 +40,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public Guest GetGuestByEmail(string email)
         {
             
-            return _context.Guests.FirstOrDefault(g => g.Email == email);
+            return _context.Guests.FirstOrDefault(g => g.Email == email); // Get the first guest with the specified email
         }
 
     }
