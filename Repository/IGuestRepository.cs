@@ -6,7 +6,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     public interface IGuestRepository
     {
         void AddGuest(Guest guest); // Add a new guest
-        void DeleteGuest(int id); 
+        void DeleteGuest(int id); // Delete a guest by ID
         List<Guest> GetAllGuests();
         Guest GetGuestByEmail(string email);
         Guest GetGuestById(int id);
