@@ -5,10 +5,10 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     //// Interface to define the contract for Room repository operations
     public interface IRoomRepository
     {
-        void AddRoom(Room room); // Get all rooms
-        void DeleteRoom(int id);  // Get a specific room by ID
-        List<Room> GetAllRooms(); // Add a new room
-        Room GetRoomById(int id);  // Update room details
-        void UpdateRoom(Room room); // Delete room by ID
+        void AddRoom(Room room); // Add a new room to the database
+        void DeleteRoom(int id); // Delete a room by its ID 
+        List<Room> GetAllRooms(); // Get all rooms from the database
+        Room GetRoomById(int id); 
+        void UpdateRoom(Room room); 
     }
 }
