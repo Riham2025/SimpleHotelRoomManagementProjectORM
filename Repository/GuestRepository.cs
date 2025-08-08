@@ -9,7 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 {
 
     // Concrete repository that implements IGuestRepository using EF Core
-    public class GuestRepository
+    public class GuestRepository : IGuestRepository
     {
 
         // Private field holding the injected DbContext instance
@@ -25,7 +25,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Retrieve all guests from the database
         public List<Guest> GetAllGuests()
         {
-            
+
             return _context.Guests.ToList(); // Get all guests from the Guests table
         }
 
@@ -39,7 +39,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Retrieve a guest by email (unique or first match)
         public Guest GetGuestByEmail(string email)
         {
-            
+
             return _context.Guests.FirstOrDefault(g => g.Email == email); // Get the first guest with the specified email
         }
 
