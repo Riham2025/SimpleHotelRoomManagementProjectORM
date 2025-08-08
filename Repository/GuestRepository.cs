@@ -57,7 +57,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         {
             
             _context.Guests.Update(guest);
-           
+            // Persist the update to the database
             _context.SaveChanges();
         }
 
