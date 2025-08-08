@@ -29,7 +29,7 @@ namespace SimpleHotelRoomManagementProjectORM
             modelBuilder.Entity<Room>()
                         .Property(r => r.RoomNumber)
                         .IsRequired()
-                        .HasMaxLength(10);
+                        .HasMaxLength(10); 
             modelBuilder.Entity<Room>()
                         .HasIndex(r => r.RoomNumber)
                         .IsUnique(); // RoomNumber must be unique
