@@ -7,7 +7,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     {
         void AddRoom(Room room); // Get all rooms
         void DeleteRoom(int id);  // Get a specific room by ID
-        List<Room> GetAllRooms();
+        List<Room> GetAllRooms(); // Add a new room
         Room GetRoomById(int id);
         void UpdateRoom(Room room);
     }
