@@ -9,7 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         void DeleteGuest(int id); // Delete a guest by ID
         List<Guest> GetAllGuests(); // Get all guests
         Guest GetGuestByEmail(string email); // Get a guest by email
-        Guest GetGuestById(int id);
+        Guest GetGuestById(int id); // Get a guest by ID
         void UpdateGuest(Guest guest);
     }
 }
