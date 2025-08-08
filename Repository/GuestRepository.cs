@@ -32,7 +32,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Retrieve a guest by its primary key (GuestId)
         public Guest GetGuestById(int id)
         {
-           
+            // Find the first guest where GuestId equals the provided id; returns null if none
             return _context.Guests.FirstOrDefault(g => g.GuestId == id);
         }
 
