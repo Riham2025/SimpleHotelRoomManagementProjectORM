@@ -57,7 +57,7 @@ namespace SimpleHotelRoomManagementProjectORM
             // Each booking is linked to one guest
             modelBuilder.Entity<Booking>()
                         .HasOne(b => b.Guest)
-                        .WithMany(g => g.Bookings)
+                        .WithMany(g => g.Bookings) // A guest can have many bookings
                         .HasForeignKey(b => b.GuestId); 
 
 
