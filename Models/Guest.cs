@@ -11,5 +11,10 @@ namespace SimpleHotelRoomManagementProjectORM.Models
     {
         [Key] // Primary key for EF
         public int GuestId { get; set; } // Unique identifier for the guest
+
+        [Required] // Cannot be null
+        [MaxLength(50)]
+        public string Name { get; set; }
+
     }
 }
