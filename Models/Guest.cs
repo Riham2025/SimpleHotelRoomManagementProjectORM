@@ -21,5 +21,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         public ICollection<Booking> Bookings { get; set; } // List of bookings associated with this guest
 
+        public ICollection<Review> Reviews { get; set; } // List of reviews written by this guest
+
     }
 }
