@@ -15,5 +15,12 @@ namespace SimpleHotelRoomManagementProjectORM
         public DbSet<Booking> Bookings { get; set; } // Represents the Bookings table in the database
         public DbSet<Review> Reviews { get; set; } // Represents the Reviews table in the database
 
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)  
+        {
+            // Connection string to local SQL Server
+            optionsBuilder.UseSqlServer(@"Server=.;Database=HotelDb;Trusted_Connection=True;TrustServerCertificate=True;");
+        }
+
     }
 }
