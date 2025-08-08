@@ -22,7 +22,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public bool IsReserved { get; set; } // Indicates if the room is reserved
 
         // Navigation property to related bookings
-        public ICollection<Booking> Bookings { get; set; }
+        public ICollection<Booking> Bookings { get; set; } // List of bookings associated with this room
 
     }
 }
