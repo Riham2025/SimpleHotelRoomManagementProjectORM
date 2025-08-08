@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
-    internal class GuestRepository
+
+    // Concrete repository that implements IGuestRepository using EF Core
+    public class GuestRepository
     {
     }
 }
