@@ -17,7 +17,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public string Name { get; set; } // Guest's name
 
         [EmailAddress] // Validates that the string is a valid email format
-        public string Email { get; set; }
+        public string Email { get; set; } // Guest's email address
 
     }
 }
