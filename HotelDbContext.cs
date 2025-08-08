@@ -47,6 +47,12 @@ namespace SimpleHotelRoomManagementProjectORM
                         .WithMany(g => g.Reviews) //A guest can have many reviews
                         .HasForeignKey(r => r.GuestId); // Foreign key in Review table
 
+            // Configure Booking entity relationships
+            
+                        .HasOne(b => b.Room)
+                        .WithMany(r => r.Bookings)
+                        .HasForeignKey(b => b.RoomId);
+
 
         }
     }
