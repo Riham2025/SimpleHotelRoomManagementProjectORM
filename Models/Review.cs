@@ -11,5 +11,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
     {
         [Key] // Primary key for EF
         public int ReviewId { get; set; } // Unique identifier for the review
+
+        [Required] // Cannot be null
+        public int GuestId { get; set; }
     }
 }
