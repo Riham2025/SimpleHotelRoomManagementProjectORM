@@ -10,6 +10,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
     public class Booking
     {
         [Key] // Primary key for EF
-        public int BookingId { get; set; }
+        public int BookingId { get; set; } // Unique identifier for the booking
     }
 }
