@@ -52,7 +52,7 @@ namespace SimpleHotelRoomManagementProjectORM
             modelBuilder.Entity<Booking>()
                         .HasOne(b => b.Room) 
                         .WithMany(r => r.Bookings)
-                        .HasForeignKey(b => b.RoomId);
+                        .HasForeignKey(b => b.RoomId); // Foreign key in Booking table
 
             // Each booking is linked to one guest
             modelBuilder.Entity<Booking>()
