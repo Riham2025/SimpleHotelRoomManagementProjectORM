@@ -36,10 +36,17 @@ namespace SimpleHotelRoomManagementProjectORM
 
 
             // Configure Guest entity: Name is required with a max length of 50
-            modelBuilder.Entity<Guest>()
+            modelBuilder.Entity<Guest>() 
                         .Property(g => g.Name)
                         .IsRequired()
                         .HasMaxLength(50);
+
+            // Configure Review entity: Each review belongs to one guest
+            modelBuilder.Entity<Review>()
+                        .HasOne(r => r.Guest) 
+                        .WithMany(g => g.Reviews) 
+                        .HasForeignKey(r => r.GuestId); 
+
 
         }
     }
