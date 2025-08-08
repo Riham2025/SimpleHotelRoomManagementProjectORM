@@ -64,7 +64,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Delete an existing guest by id
         public void DeleteGuest(int id)
         {
-            
+            // Try to find the entity to delete
             var existing = _context.Guests.FirstOrDefault(g => g.GuestId == id);
            
             if (existing != null)
