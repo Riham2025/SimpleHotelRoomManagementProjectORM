@@ -55,7 +55,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Update an existing guest
         public void UpdateGuest(Guest guest)
         {
-            
+            // Mark the guest as modified (EF will generate UPDATE for changed fields)
             _context.Guests.Update(guest);
             // Persist the update to the database
             _context.SaveChanges();
