@@ -44,7 +44,7 @@ namespace SimpleHotelRoomManagementProjectORM
             // Configure Review entity: Each review belongs to one guest
             modelBuilder.Entity<Review>()
                         .HasOne(r => r.Guest) //A review has one guest
-                        .WithMany(g => g.Reviews) 
+                        .WithMany(g => g.Reviews) //A guest can have many reviews
                         .HasForeignKey(r => r.GuestId); 
 
 
