@@ -61,5 +61,20 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             _context.SaveChanges();
         }
 
+        // Delete an existing guest by id
+        public void DeleteGuest(int id)
+        {
+            
+            var existing = _context.Guests.FirstOrDefault(g => g.GuestId == id);
+           
+            if (existing != null)
+            {
+                
+                _context.Guests.Remove(existing);
+                
+                _context.SaveChanges();
+            }
+        }
+
     }
 }
