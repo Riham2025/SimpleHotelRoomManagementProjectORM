@@ -22,7 +22,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Get all rooms from the database
         public List<Room> GetAllRooms()
         {
-            return _context.Rooms.ToList();
+            return _context.Rooms.ToList(); // Retrieve all rooms from the Rooms table
         }
 
     }
