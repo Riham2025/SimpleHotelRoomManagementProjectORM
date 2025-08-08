@@ -14,7 +14,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Required] // Cannot be null
         [MaxLength(50)] // Maximum length for the name
-        public string Name { get; set; }
+        public string Name { get; set; } // Guest's name
 
     }
 }
