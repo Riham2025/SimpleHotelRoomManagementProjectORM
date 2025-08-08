@@ -16,32 +16,24 @@ namespace SimpleHotelRoomManagementProjectORM
         public DbSet<Review> Reviews { get; set; } // Represents the Reviews table in the database
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)  
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Connection string to local SQL Server
-            optionsBuilder.UseSqlServer(@"Server=.;Database=HotelDb;Trusted_Connection=True;TrustServerCertificate=True;"); 
+            optionsBuilder.UseSqlServer(@"Server=.;Database=HotelDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Fluent API Example:
-            //RoomNumber is required and limited to 10 characters, and made unique
-            modelBuilder.Entity<Room>().Property(r => r.RoomNumber).IsRequired().HasMaxLength(10); 
+            // Use Fluent API to configure Room entity
+            // RoomNumber is required and limited to 10 characters, and made unique
+            modelBuilder.Entity<Room>()
+                        .Property(r => r.RoomNumber)
+                        .IsRequired()
+                        .HasMaxLength(10);
+            modelBuilder.Entity<Room>()
+                        .HasIndex(r => r.RoomNumber)
+                        .IsUnique(); // RoomNumber must be unique
 
-            modelBuilder.Entity<Guest>().Property(g => g.Name).IsRequired().HasMaxLength(50);
-
-            modelBuilder.Entity<Review>().HasOne(r => r.Guest)
-                                         .WithMany(g => g.Reviews)
-                                         .HasForeignKey(r => r.GuestId); 
-
-            modelBuilder.Entity<Booking>().HasOne(b => b.Room)
-                                          .WithMany(r => r.Bookings)
-                                          .HasForeignKey(b => b.RoomId);
-
-            modelBuilder.Entity<Booking>().HasOne(b => b.Guest)
-                                          .WithMany(g => g.Bookings)
-                                          .HasForeignKey(b => b.GuestId);
         }
-
     }
 }
