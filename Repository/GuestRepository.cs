@@ -46,7 +46,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Add a new guest to the database
         public void AddGuest(Guest guest)
         {
-            
+            // Stage the new entity for insertion
             _context.Guests.Add(guest);
             // Commit the pending change to the database (INSERT)
             _context.SaveChanges();
