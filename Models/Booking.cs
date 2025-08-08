@@ -14,5 +14,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Required] // Cannot be null
         public int RoomId { get; set; } // Foreign key to the Room table
+
+        [Required] // Cannot be null
+        public int GuestId { get; set; }
     }
 }
