@@ -36,5 +36,12 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Guests.FirstOrDefault(g => g.GuestId == id);
         }
 
+        // Retrieve a guest by email (unique or first match)
+        public Guest GetGuestByEmail(string email)
+        {
+            
+            return _context.Guests.FirstOrDefault(g => g.Email == email);
+        }
+
     }
 }
