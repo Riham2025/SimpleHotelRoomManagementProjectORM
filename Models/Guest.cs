@@ -10,6 +10,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
     public class Guest
     {
         [Key] // Primary key for EF
-        public int GuestId { get; set; }
+        public int GuestId { get; set; } // Unique identifier for the guest
     }
 }
