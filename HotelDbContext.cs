@@ -58,7 +58,7 @@ namespace SimpleHotelRoomManagementProjectORM
             modelBuilder.Entity<Booking>()
                         .HasOne(b => b.Guest)
                         .WithMany(g => g.Bookings)
-                        .HasForeignKey(b => b.GuestId);
+                        .HasForeignKey(b => b.GuestId); 
 
 
         }
