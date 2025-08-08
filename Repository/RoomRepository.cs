@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Models;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
@@ -16,6 +17,12 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public RoomRepository(HotelDbContext context) 
         {
             _context = context; // Assign the injected context to the private field
+        }
+
+        // Get all rooms from the database
+        public List<Room> GetAllRooms()
+        {
+            return _context.Rooms.ToList();
         }
 
     }
