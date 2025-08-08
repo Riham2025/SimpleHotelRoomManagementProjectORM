@@ -50,9 +50,15 @@ namespace SimpleHotelRoomManagementProjectORM
             // Configure Booking entity relationships
             // Each booking is linked to one room
             modelBuilder.Entity<Booking>()
-                        .HasOne(b => b.Room)
+                        .HasOne(b => b.Room) 
                         .WithMany(r => r.Bookings)
                         .HasForeignKey(b => b.RoomId);
+
+            // Each booking is linked to one guest
+            modelBuilder.Entity<Booking>()
+                        .HasOne(b => b.Guest)
+                        .WithMany(g => g.Bookings)
+                        .HasForeignKey(b => b.GuestId);
 
 
         }
