@@ -51,7 +51,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             var room = _context.Rooms.FirstOrDefault(r => r.RoomId == id); // Retrieve the room with the specified ID from the Rooms table
             if (room != null)
             {
-                _context.Rooms.Remove(room);
+                _context.Rooms.Remove(room); // Remove the room from the Rooms table
                 _context.SaveChanges();
             }
         }
