@@ -11,7 +11,7 @@ namespace SimpleHotelRoomManagementProjectORM
     public class HotelDbContext : DbContext
     {
         public DbSet<Room> Rooms { get; set; } // Represents the Rooms table in the database
-        public DbSet<Guest> Guests { get; set; }
+        public DbSet<Guest> Guests { get; set; } // Represents the Guests table in the database
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
