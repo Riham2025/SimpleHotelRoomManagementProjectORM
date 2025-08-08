@@ -9,5 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     // Implementation of IRoomRepository using Entity Framework Core
     public class RoomRepository
     {
+
+        private readonly HotelDbContext _context; // Database context for accessing the database
     }
 }
