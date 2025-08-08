@@ -11,5 +11,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
     {
         [Key] // Primary key for EF
         public int BookingId { get; set; } // Unique identifier for the booking
+
+        [Required] // Cannot be null
+        public int RoomId { get; set; }
     }
 }
