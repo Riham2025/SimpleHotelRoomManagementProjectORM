@@ -71,7 +71,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             {
                 // Stage the entity for deletion
                 _context.Guests.Remove(existing);
-                
+                // Execute DELETE on the database
                 _context.SaveChanges();
             }
         }
