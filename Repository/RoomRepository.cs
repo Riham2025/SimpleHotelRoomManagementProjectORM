@@ -25,5 +25,11 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Rooms.ToList(); // Retrieve all rooms from the Rooms table
         }
 
+        // Get a specific room by ID
+        public Room GetRoomById(int id)
+        {
+            return _context.Rooms.FirstOrDefault(r => r.RoomId == id);
+        }
+
     }
 }
