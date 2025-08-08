@@ -13,6 +13,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public int ReviewId { get; set; } // Unique identifier for the review
 
         [Required] // Cannot be null
-        public int GuestId { get; set; }
+        public int GuestId { get; set; } // Foreign key to the Guest table
     }
 }
