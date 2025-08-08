@@ -10,6 +10,6 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         List<Guest> GetAllGuests(); // Get all guests
         Guest GetGuestByEmail(string email); // Get a guest by email
         Guest GetGuestById(int id); // Get a guest by ID
-        void UpdateGuest(Guest guest);
+        void UpdateGuest(Guest guest); // Update an existing guest
     }
 }
