@@ -69,7 +69,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             // Only proceed if found
             if (existing != null)
             {
-                
+                // Stage the entity for deletion
                 _context.Guests.Remove(existing);
                 
                 _context.SaveChanges();
