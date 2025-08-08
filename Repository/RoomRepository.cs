@@ -13,9 +13,9 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         private readonly HotelDbContext _context; // Database context for accessing the database
 
         // Constructor: inject the database context
-        public RoomRepository(HotelDbContext context)
+        public RoomRepository(HotelDbContext context) 
         {
-            _context = context; 
+            _context = context; // Assign the injected context to the private field
         }
 
     }
