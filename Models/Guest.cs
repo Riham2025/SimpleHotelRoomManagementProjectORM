@@ -16,5 +16,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         [MaxLength(50)] // Maximum length for the name
         public string Name { get; set; } // Guest's name
 
+        [EmailAddress] // Validates that the string is a valid email format
+        public string Email { get; set; }
+
     }
 }
