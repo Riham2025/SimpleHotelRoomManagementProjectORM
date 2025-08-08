@@ -18,6 +18,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         [Range(100, double.MaxValue)] // Enforce rate >= 100
         public double DailyRate { get; set; } // Daily rate for the room
 
+        [Required] // Cannot be null
         public bool IsReserved { get; set; } // Indicates if the room is reserved
 
     }
