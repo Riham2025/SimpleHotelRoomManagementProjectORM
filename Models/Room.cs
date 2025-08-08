@@ -14,5 +14,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Required] // Cannot be null
         public string RoomNumber { get; set; }// Room number (e.g., "101", "102")
+
+        [Range(100, double.MaxValue)] // Enforce rate >= 100
+        public double DailyRate { get; set; }
     }
 }
