@@ -43,5 +43,14 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Guests.FirstOrDefault(g => g.Email == email); // Get the first guest with the specified email
         }
 
+        // Add a new guest to the database
+        public void AddGuest(Guest guest)
+        {
+            
+            _context.Guests.Add(guest);
+           
+            _context.SaveChanges();
+        }
+
     }
 }
