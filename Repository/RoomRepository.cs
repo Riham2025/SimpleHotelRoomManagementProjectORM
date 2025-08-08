@@ -31,5 +31,12 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Rooms.FirstOrDefault(r => r.RoomId == id); // Retrieve the room with the specified ID from the Rooms table
         }
 
+        // Add a new room to the database
+        public void AddRoom(Room room)
+        {
+            _context.Rooms.Add(room);
+            _context.SaveChanges(); // Save the change to the database
+        }
+
     }
 }
