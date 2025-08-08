@@ -34,7 +34,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Add a new room to the database
         public void AddRoom(Room room)
         {
-            _context.Rooms.Add(room);
+            _context.Rooms.Add(room); 
             _context.SaveChanges(); // Save the change to the database
         }
 
