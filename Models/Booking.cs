@@ -20,5 +20,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         [Range(1, 30)] // Enforce nights between 1 and 30
         public int Nights { get; set; } // Number of nights booked
+
+        public DateTime BookingDate { get; set; } = DateTime.Now; // Date of booking, defaults to now
     }
 }
