@@ -41,7 +41,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Update an existing room
         public void UpdateRoom(Room room) // Update an existing room in the database
         {
-            _context.Rooms.Update(room); 
+            _context.Rooms.Update(room); // Update the room in the Rooms table 
             _context.SaveChanges();
         }
 
