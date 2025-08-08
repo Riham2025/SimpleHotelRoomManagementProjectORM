@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Models;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
@@ -19,6 +20,13 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         {
             // Store the incoming context for later use in methods
             _context = context;
+        }
+
+        // Retrieve all guests from the database
+        public List<Guest> GetAllGuests()
+        {
+            
+            return _context.Guests.ToList();
         }
 
     }
