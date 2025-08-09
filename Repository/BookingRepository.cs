@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using SimpleHotelRoomManagementProjectORM.Models;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
@@ -21,6 +22,13 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 
         // Retrieve all bookings from the database
         public List<Booking> GetAllBookings()
+        {
+            // Return all bookings, including related Room and Guest data
+            return _context.Bookings
+                           .Include(b => b.Room)   
+                           .Include(b => b.Guest)  
+                           .ToList();              
+        }
 
     }
 }
