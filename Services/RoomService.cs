@@ -163,6 +163,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Delete a room by ID (you can later add rules to prevent deletion if active bookings exist)
         public bool DeleteRoom(int roomId, out string error)
         {
+            error = string.Empty; // Reset error
+
+            // Ensure the room exists
+            var existing = _roomRepo.GetRoomById(roomId);
+            if (existing == null)
+            {
+                error = "Room not found.";
+                return false;
+            }
 
         }
     }
