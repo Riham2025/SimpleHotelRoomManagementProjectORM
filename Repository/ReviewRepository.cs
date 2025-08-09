@@ -43,7 +43,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         {
             return _context.Reviews // Load the associated Guest
                            .Where(r => r.GuestId == guestId) // Filter by GuestId
-                           .ToList();
+                           .ToList(); // Execute query and return list
         }
 
     }
