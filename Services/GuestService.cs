@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
     public class GuestService
     {
+        // Reference to the data-access layer for guests
+        private readonly IGuestRepository _guestRepo;
+
     }
 }
