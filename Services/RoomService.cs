@@ -90,7 +90,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Check uniqueness against other rooms
-            var allRooms = _roomRepo.GetAllRooms();
+            var allRooms = _roomRepo.GetAllRooms(); // Get all existing rooms
+            if (allRooms.Any(r => r.RoomId != roomId && // Check if room ID is different
+                                  string.Equals(r.RoomNumber?.Trim(), newRoomNumber.Trim(), StringComparison.OrdinalIgnoreCase)))
 
 
         }
