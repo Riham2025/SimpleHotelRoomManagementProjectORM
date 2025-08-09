@@ -68,6 +68,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             error = string.Empty; // Reset error
 
+            // Validate new number
+            if (string.IsNullOrWhiteSpace(newRoomNumber))
+            {
+                error = "New room number cannot be empty.";
+                return false;
+            }
+
         }
     }
 }
