@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Models;
 using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
@@ -44,6 +45,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "A room with the same number already exists."; // Fail fast
                 return false;
             }
+
+            // Create the entity to persist
+            var room = new Room
+            {
+                RoomNumber = roomNumber.Trim(), // Normalize input
+                Type = type?.Trim(),            // Optional type (e.g., Single, Double)
+                DailyRate = dailyRate,          // Validated above
+                IsAvailable = true              // New rooms are available by default
+            };
 
 
 
