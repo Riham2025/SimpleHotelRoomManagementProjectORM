@@ -134,7 +134,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Ensure uniqueness for the new email
             var conflict = _guestRepo.GetGuestByEmail(newEmail); //Check if email already exists
-            if (conflict != null && conflict.GuestId != id)
+            if (conflict != null && conflict.GuestId != id) //Check if email belongs to another guest
             {
                 error = "Another guest with this email already exists.";
                 return false;
