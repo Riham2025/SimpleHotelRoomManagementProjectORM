@@ -9,7 +9,7 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public class GuestService
+    public class GuestService : IGuestService
     {
         // Reference to the data-access layer for guests
         private readonly IGuestRepository _guestRepo;
@@ -46,7 +46,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Basic name validation: must not be null/whitespace
             if (string.IsNullOrWhiteSpace(name))
             {
-                error = "Name cannot be empty."; 
+                error = "Name cannot be empty.";
                 return false; // Fail early
             }
 
@@ -60,8 +60,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Ensure the email is unique across all guests
             if (_guestRepo.GetGuestByEmail(email) != null) //Check if email already exists
             {
-                error = "A guest with the same email already exists."; 
-                return false; 
+                error = "A guest with the same email already exists.";
+                return false;
             }
 
             // Create the entity
@@ -128,7 +128,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // If email is unchanged, consider this a no-op success
-            if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase)) 
+            if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase))
             {
                 return true; // Nothing to update
             }
@@ -158,9 +158,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Check existence
             var existing = _guestRepo.GetGuestById(id);
-            if (existing == null) 
+            if (existing == null)
             {
-                error = "Guest not found."; 
+                error = "Guest not found.";
                 return false;
             }
 
