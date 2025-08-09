@@ -11,5 +11,11 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 
         // Reference to database context
         private readonly HotelDbContext _context;
+
+        // Constructor with dependency injection
+        public ReviewRepository(HotelDbContext context)
+        {
+            _context = context; 
+        }
     }
 }
