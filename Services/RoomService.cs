@@ -83,6 +83,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false; 
             }
 
+            // If unchanged (ignoring case/whitespace), we’re done
+            if (string.Equals(existing.RoomNumber?.Trim(), newRoomNumber.Trim(), StringComparison.OrdinalIgnoreCase))
+            {
+                return true; // No change needed
+            }
+
 
         }
     }
