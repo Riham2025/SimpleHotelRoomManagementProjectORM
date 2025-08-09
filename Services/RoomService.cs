@@ -119,7 +119,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "Daily rate must be at least 100."; // Fail fast
                 return false;// Early exit
             }
-            
+
+            // Load existing room
+            var existing = _roomRepo.GetRoomById(roomId);
+            if (existing == null)
+            {
+                error = "Room not found.";
+                return false;
+            }
+
         }
     }
 }
