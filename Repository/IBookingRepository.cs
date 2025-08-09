@@ -7,7 +7,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         void AddBooking(Booking booking); // Add a new booking to the database
         void DeleteBooking(int id); // Delete a booking by its ID
         List<Booking> GetActiveBookingsForRoom(int roomId, DateTime? onDate = null); // Retrieve active bookings for a specific room, optionally on a specific date
-        List<Booking> GetAllBookings();
+        List<Booking> GetAllBookings(); // Retrieve all bookings
         Booking GetBookingById(int id);
         List<Booking> GetBookingsByGuest(int guestId);
         void UpdateBooking(Booking booking);
