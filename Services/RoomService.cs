@@ -8,7 +8,7 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public class RoomService
+    public class RoomService : IRoomService
     {
         // Reference to the data-access layer (Room repository)
         private readonly IRoomRepository _roomRepo;
@@ -109,7 +109,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Update the daily rate (business rule: minimum 100)
-        public bool UpdateDailyRate(int roomId, double newRate, out string error) 
+        public bool UpdateDailyRate(int roomId, double newRate, out string error)
         {
             error = string.Empty; // Reset error
 
@@ -122,7 +122,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Load existing room
             var existing = _roomRepo.GetRoomById(roomId); //Check if room exists
-            if (existing == null) 
+            if (existing == null)
             {
                 error = "Room not found."; // Fail fast
                 return false; // Early exit
