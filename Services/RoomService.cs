@@ -99,6 +99,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false; // Early exit
             }
 
+            // Apply change and persist
+            existing.RoomNumber = newRoomNumber.Trim();
+            _roomRepo.UpdateRoom(existing);
+
+
 
         }
     }
