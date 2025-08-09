@@ -183,5 +183,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true;
 
         }
+
+        // Return all rooms (pass-through)
+        public List<Room> GetAllRooms()
+        {
+            return _roomRepo.GetAllRooms();
+        }
     }
 }
