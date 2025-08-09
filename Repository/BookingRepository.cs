@@ -43,7 +43,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Retrieve all bookings for a specific guest
         public List<Booking> GetBookingsByGuest(int guestId)
         {
-           
+            // Return bookings where GuestId matches, including Room info
             return _context.Bookings
                            .Include(b => b.Room)
                            .Where(b => b.GuestId == guestId)
