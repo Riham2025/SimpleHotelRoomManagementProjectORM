@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Models;
 using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
@@ -17,6 +18,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             _guestRepo = guestRepo; // Store the repository for later use
         }
+
+        // Get all guests (no extra rules needed here)
+        public List<Guest> GetAllGuests()
+        { }
 
     }
 }
