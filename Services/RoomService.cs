@@ -51,7 +51,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             {
                 RoomNumber = roomNumber.Trim(), // Normalize input
                 Type = type?.Trim(), // Normalize type (optional)          
-                DailyRate = dailyRate,          
+                DailyRate = dailyRate, // Set the daily rate         
                 IsAvailable = true              
             };
 
