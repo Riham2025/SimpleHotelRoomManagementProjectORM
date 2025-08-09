@@ -10,6 +10,6 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         Guest GetGuestById(int id);//Return a single guest by ID
         bool RegisterGuest(string name, string email, out string error); // Register a new guest with validations (non-empty name, valid and unique email)
         bool UpdateGuestEmail(int id, string newEmail, out string error); // Update a guest's email with validations (must be valid and unique)
-        bool UpdateGuestName(int id, string newName, out string error);
+        bool UpdateGuestName(int id, string newName, out string error); // Update a guest's name with validations (must not be empty)
     }
 }
