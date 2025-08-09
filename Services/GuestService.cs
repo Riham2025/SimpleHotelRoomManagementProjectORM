@@ -109,7 +109,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Update only the email after validation and uniqueness check
         public bool UpdateGuestEmail(int id, string newEmail, out string error)
         {
-            error = string.Empty; // 
+            error = string.Empty; // Reset error
 
             // 
             if (!IsValidEmail(newEmail))
