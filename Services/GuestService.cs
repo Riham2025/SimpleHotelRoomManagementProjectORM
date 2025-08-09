@@ -171,6 +171,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
         // Private helper to check a simple email format using regex
         private static bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email)) return false; // Empty is invalid
+        }
 
     }
 }
