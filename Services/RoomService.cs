@@ -39,7 +39,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Enforce uniqueness at the service level (in addition to the DB unique index)
             var allRooms = _roomRepo.GetAllRooms(); // Pull current rooms
-            if (allRooms.Any(r => string.Equals(r.RoomNumber?.Trim(), roomNumber.Trim(), StringComparison.OrdinalIgnoreCase)))
+            if (allRooms.Any(r => string.Equals(r.RoomNumber?.Trim(), roomNumber.Trim(), StringComparison.OrdinalIgnoreCase))) // Check if room number already exists
             {
                 error = "A room with the same number already exists."; // Fail fast
                 return false;
