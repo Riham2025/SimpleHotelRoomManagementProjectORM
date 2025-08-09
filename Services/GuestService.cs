@@ -70,6 +70,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 Email = email.Trim()  // Normalize email
             };
 
+            // Persist through repository
+            _guestRepo.AddGuest(guest);
+
 
         }
 
