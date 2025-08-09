@@ -81,6 +81,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public bool UpdateGuestName(int id, string newName, out string error)
         {
             error = string.Empty; // Reset error
+
+            // Validate new name
+            if (string.IsNullOrWhiteSpace(newName))
+            {
+                error = "New name cannot be empty.";
+                return false;
+            }
         }
 
     }
