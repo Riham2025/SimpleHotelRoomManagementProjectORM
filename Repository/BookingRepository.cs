@@ -61,7 +61,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .Where(b => b.RoomId == roomId
                                     && b.CheckInDate <= pivot
                                     && b.CheckOutDate > pivot)
-                           .Include(b => b.Guest) 
+                           .Include(b => b.Guest) // Include guest details
                            .ToList();
         }
 
