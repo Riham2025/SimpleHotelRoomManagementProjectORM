@@ -15,7 +15,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Constructor that receives the DbContext via dependency injection
         public BookingRepository(HotelDbContext context)
         {
-            _context = context; 
+            _context = context; // Store the context for use in methods
         }
 
     }
