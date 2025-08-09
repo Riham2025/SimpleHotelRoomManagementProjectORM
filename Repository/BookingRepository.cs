@@ -62,7 +62,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                                     && b.CheckInDate <= pivot // Check if booking starts before or on the pivot date
                                     && b.CheckOutDate > pivot) // Check if booking ends after the pivot date
                            .Include(b => b.Guest) // Include guest details
-                           .ToList();
+                           .ToList(); // Execute query and return list
         }
 
 
