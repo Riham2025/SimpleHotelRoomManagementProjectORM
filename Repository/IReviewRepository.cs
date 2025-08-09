@@ -6,7 +6,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     {
         void AddReview(Review review); // Add a new review to the database
         void DeleteReview(int id); // Delete a review by its ID
-        List<Review> GetAllReviews();
+        List<Review> GetAllReviews(); // Retrieve all reviews
         double GetAverageRatingForGuest(int guestId);
         Review GetReviewById(int id);
         List<Review> GetReviewsForGuest(int guestId);
