@@ -20,8 +20,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Get all guests (no extra rules needed here)
-        public List<Guest> GetAllGuests()
-        { }
+        public List<Guest> GetAllGuests() 
+        {
+            return _guestRepo.GetAllGuests(); // Delegate to repository
+        }
 
     }
 }
