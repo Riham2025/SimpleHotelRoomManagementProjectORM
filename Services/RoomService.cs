@@ -17,5 +17,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             _roomRepo = roomRepo; // Store for later use in methods
         }
+
+        // Create a new room after validating number uniqueness and minimum rate
+        public bool CreateRoom(string roomNumber, string type, double dailyRate, out string error)
     }
 }
