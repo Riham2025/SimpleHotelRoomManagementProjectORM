@@ -2,6 +2,7 @@
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
+    // High-level contract for Room operations (consumed by UI/controllers)
     public interface IRoomService
     {
         bool ChangeRoomNumber(int roomId, string newRoomNumber, out string error); // Change room number with uniqueness and non-empty checks
