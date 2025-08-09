@@ -169,5 +169,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true; // Success
         }
 
+        // Private helper to check a simple email format using regex
+        private static bool IsValidEmail(string email)
+
     }
 }
