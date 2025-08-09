@@ -11,5 +11,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
     {
         // Reference to the data-access layer (Room repository)
         private readonly IRoomRepository _roomRepo;
+
+        // Inject the repository via constructor (DI-friendly)
+        public RoomService(IRoomRepository roomRepo)
+        { }
     }
 }
