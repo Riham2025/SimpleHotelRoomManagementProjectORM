@@ -128,6 +128,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false; // Early exit
             }
 
+            // Apply and persist
+            existing.DailyRate = newRate;
+            _roomRepo.UpdateRoom(existing);
+
         }
     }
 }
