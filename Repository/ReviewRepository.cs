@@ -26,7 +26,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             // Return all reviews with Guest info
             return _context.Reviews
                            .Include(r => r.Guest) // Load the associated Guestc
-                           .ToList();
+                           .ToList(); // Execute query and return list
 
         }
     }
