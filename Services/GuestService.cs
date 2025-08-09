@@ -154,6 +154,14 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public bool DeleteGuest(int id, out string error)
         {
             error = string.Empty; // Reset error
+
+            // Check existence
+            var existing = _guestRepo.GetGuestById(id);
+            if (existing == null)
+            {
+                error = "Guest not found.";
+                return false;
+            }
         }
 
     }
