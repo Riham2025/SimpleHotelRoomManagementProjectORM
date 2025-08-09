@@ -8,7 +8,8 @@ using SimpleHotelRoomManagementProjectORM.Models;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
-    public class ReviewRepository
+    // Implements IReviewRepository using EF Core for data access
+    public class ReviewRepository : IReviewRepository
     {
 
         // Reference to database context
