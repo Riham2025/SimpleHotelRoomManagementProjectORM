@@ -34,7 +34,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Validate rate (per requirements: daily rate must be >= 100)
             if (dailyRate < 100) //Check if daily rate is less than 100
             {
-                error = "Daily rate must be at least 100."; 
+                error = "Daily rate must be at least 100.";
                 return false; // Fail fast
             }
 
@@ -71,16 +71,16 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Validate new number
             if (string.IsNullOrWhiteSpace(newRoomNumber)) //Check if new room number is empty
             {
-                error = "New room number cannot be empty."; 
+                error = "New room number cannot be empty.";
                 return false; // Fail fast
             }
 
             // Load existing room
             var existing = _roomRepo.GetRoomById(roomId); //Check if room exists
-            if (existing == null) 
+            if (existing == null)
             {
                 error = "Room not found."; // Fail fast
-                return false; 
+                return false;
             }
 
             // If unchanged (ignoring case/whitespace), we’re done
@@ -106,6 +106,19 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Success
             return true;
 
+        }
+
+        // Update the daily rate (business rule: minimum 100)
+        public bool UpdateDailyRate(int roomId, double newRate, out string error)
+        {
+            error = string.Empty; // Reset error
+
+            // Validate rate
+            if (newRate < 100)
+            {
+                error = "Daily rate must be at least 100.";
+                return false;
+            }
         }
     }
 }
