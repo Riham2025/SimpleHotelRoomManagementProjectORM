@@ -34,8 +34,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public Review GetReviewById(int id)
         {
             return _context.Reviews // Load the associated Guest
-                           .Include(r => r.Guest)
-                           .FirstOrDefault(r => r.ReviewId == id);
+                           .Include(r => r.Guest) 
+                           .FirstOrDefault(r => r.ReviewId == id); // Execute query and return the first match or null
         }
 
     }
