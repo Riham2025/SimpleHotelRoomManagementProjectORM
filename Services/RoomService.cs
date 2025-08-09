@@ -143,7 +143,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             error = string.Empty; // Reset error
 
             // Load existing room
-            var existing = _roomRepo.GetRoomById(roomId);
+            var existing = _roomRepo.GetRoomById(roomId); //Check if room exists
         }
     }
 }
