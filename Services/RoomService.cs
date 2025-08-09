@@ -109,16 +109,17 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Update the daily rate (business rule: minimum 100)
-        public bool UpdateDailyRate(int roomId, double newRate, out string error)
+        public bool UpdateDailyRate(int roomId, double newRate, out string error) 
         {
             error = string.Empty; // Reset error
 
             // Validate rate
-            if (newRate < 100)
+            if (newRate < 100) // Check if new rate is less than 100
             {
-                error = "Daily rate must be at least 100.";
+                error = "Daily rate must be at least 100."; // Fail fast
                 return false;
             }
+            
         }
     }
 }
