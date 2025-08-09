@@ -57,10 +57,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Ensure the email is unique across all guests
-            if (_guestRepo.GetGuestByEmail(email) != null)
+            if (_guestRepo.GetGuestByEmail(email) != null) //Check if email already exists
             {
-                error = "A guest with the same email already exists.";
-                return false;
+                error = "A guest with the same email already exists."; 
+                return false; 
             }
 
 
