@@ -195,5 +195,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _roomRepo.GetRoomById(roomId);
         }
+
+        // Helper: list available rooms only
+        public List<Room> FindAvailableRooms()
+        {
+            return _roomRepo.GetAllRooms()
+                            .Where(r => r.IsAvailable) // Filter in memory; alternatively create a repo method if you prefer server-side
+                            .ToList();
+        }
     }
 }
