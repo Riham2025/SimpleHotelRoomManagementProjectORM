@@ -75,7 +75,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Update an existing booking
         public void UpdateBooking(Booking booking)
         {
-            _context.Bookings.Update(booking); 
+            _context.Bookings.Update(booking); // Mark entity as modified
             _context.SaveChanges();            
         }
 
