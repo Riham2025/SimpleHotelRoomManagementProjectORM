@@ -86,7 +86,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             if (existing != null)
             {
                 _context.Bookings.Remove(existing); // Mark for deletion
-                _context.SaveChanges();             
+                _context.SaveChanges();             // Save changes (DELETE)
             }
         }
 
