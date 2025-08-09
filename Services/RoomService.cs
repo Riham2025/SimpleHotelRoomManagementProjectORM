@@ -24,7 +24,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             error = string.Empty; // Initialize error output
 
             // Validate room number (non-empty)
-            if (string.IsNullOrWhiteSpace(roomNumber))
+            if (string.IsNullOrWhiteSpace(roomNumber)) //Check if room number is empty
             {
                 error = "Room number cannot be empty.";
                 return false; // Fail fast
