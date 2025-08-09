@@ -2,7 +2,7 @@
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
-    public interface IReviewRepository
+    public interface IReviewRepository // Interface for Review repository
     {
         void AddReview(Review review);
         void DeleteReview(int id);
