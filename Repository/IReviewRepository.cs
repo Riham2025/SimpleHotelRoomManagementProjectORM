@@ -4,7 +4,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 {
     public interface IReviewRepository // Interface for Review repository
     {
-        void AddReview(Review review);
+        void AddReview(Review review); // Add a new review to the database
         void DeleteReview(int id);
         List<Review> GetAllReviews();
         double GetAverageRatingForGuest(int guestId);
