@@ -29,6 +29,14 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "Room number cannot be empty.";
                 return false; // Fail fast
             }
+
+            // Validate rate (per requirements: daily rate must be >= 100)
+            if (dailyRate < 100)
+            {
+                error = "Daily rate must be at least 100.";
+                return false;
+            }
+
         }
     }
 }
