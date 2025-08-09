@@ -5,7 +5,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
     public interface IGuestService 
     {
         bool DeleteGuest(int id, out string error); // Delete a guest by ID (may add business rules later, e.g., cannot delete with active bookings)
-        List<Guest> GetAllGuests();
+        List<Guest> GetAllGuests(); //Return all guests
         Guest GetGuestByEmail(string email);
         Guest GetGuestById(int id);
         bool RegisterGuest(string name, string email, out string error);
