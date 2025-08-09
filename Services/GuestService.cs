@@ -63,6 +63,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false; 
             }
 
+            // Create the entity
+            var guest = new Guest
+
 
         }
 
