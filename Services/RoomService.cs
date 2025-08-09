@@ -100,7 +100,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Apply change and persist
-            existing.RoomNumber = newRoomNumber.Trim();
+            existing.RoomNumber = newRoomNumber.Trim(); // Normalize input
             _roomRepo.UpdateRoom(existing);
 
 
