@@ -203,5 +203,16 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                             .Where(r => r.IsAvailable) // Filter in memory; alternatively create a repo method if you prefer server-side
                             .ToList(); // Return only available rooms
         }
+
+        // Helper: list available rooms filtered by type (case-insensitive)
+        public List<Room> FindAvailableRoomsByType(string type)
+        {
+            var wanted = type?.Trim(); // Normalize type
+            return _roomRepo.GetAllRooms()
+                            .Where(r => r.IsAvailable
+                                     && !string.IsNullOrWhiteSpace(r.Type)
+                                     && string.Equals(r.Type.Trim(), wanted, StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+        }
     }
 }
