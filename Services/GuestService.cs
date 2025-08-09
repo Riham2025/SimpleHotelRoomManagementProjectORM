@@ -52,7 +52,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Basic email validation using a simple regex pattern
             if (!IsValidEmail(email))
             {
-                error = "Email is not valid.";
+                error = "Email is not valid."; // Fail early
                 return false;
             }
 
