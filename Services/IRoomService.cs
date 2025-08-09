@@ -11,7 +11,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         List<Room> FindAvailableRoomsByType(string type); // Find all available rooms of a specific type
         List<Room> GetAllRooms(); // Return all rooms
         Room GetRoomById(int roomId); // Return a single room by ID (or null if not found)
-        bool SetAvailability(int roomId, bool isAvailable, out string error);
+        bool SetAvailability(int roomId, bool isAvailable, out string error); // Set room availability status (e.g., mark as reserved or available)
         bool UpdateDailyRate(int roomId, double newRate, out string error);
     }
 }
