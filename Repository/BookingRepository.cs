@@ -37,7 +37,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Bookings
                            .Include(b => b.Room) // Load the associated Room
                            .Include(b => b.Guest) // Load the associated Guest
-                           .FirstOrDefault(b => b.BookingId == id);
+                           .FirstOrDefault(b => b.BookingId == id); // Execute query and return the first match or null
         }
 
     }
