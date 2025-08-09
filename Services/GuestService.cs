@@ -118,7 +118,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
-            // 
+            // Load the existing entity
             var existing = _guestRepo.GetGuestById(id);
             if (existing == null)
             {
