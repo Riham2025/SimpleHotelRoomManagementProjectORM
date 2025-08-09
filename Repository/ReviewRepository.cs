@@ -59,5 +59,12 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return query.Average(r => r.Rating);
 
         }
+
+        // Add a new review
+        public void AddReview(Review review)
+        {
+            _context.Reviews.Add(review);
+            _context.SaveChanges();
+        }
     }
 }
