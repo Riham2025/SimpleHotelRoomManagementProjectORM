@@ -141,6 +141,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public bool SetAvailability(int roomId, bool isAvailable, out string error)
         {
             error = string.Empty; // Reset error
+
+            // Load existing room
+            var existing = _roomRepo.GetRoomById(roomId);
         }
     }
 }
