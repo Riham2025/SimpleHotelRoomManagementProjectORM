@@ -80,7 +80,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             var existing = _context.Reviews.FirstOrDefault(r => r.ReviewId == id); // Find the review by ID
             if (existing != null) // Check if the review exists
             {
-                _context.Reviews.Remove(existing);
+                _context.Reviews.Remove(existing); // Mark the review for deletion
                 _context.SaveChanges();
             }
         }
