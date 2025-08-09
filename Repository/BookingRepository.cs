@@ -85,7 +85,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             var existing = _context.Bookings.FirstOrDefault(b => b.BookingId == id); // Find entity
             if (existing != null)
             {
-                _context.Bookings.Remove(existing); 
+                _context.Bookings.Remove(existing); // Mark for deletion
                 _context.SaveChanges();             
             }
         }
