@@ -155,6 +155,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             existing.IsAvailable = isAvailable; // Normalize input
             _roomRepo.UpdateRoom(existing); // Save changes
 
+            // Success
+            return true;
+
         }
     }
 }
