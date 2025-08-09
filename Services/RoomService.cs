@@ -210,7 +210,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var wanted = type?.Trim(); // Normalize type
             return _roomRepo.GetAllRooms()
                             .Where(r => r.IsAvailable // Check if room is available
-                                     && !string.IsNullOrWhiteSpace(r.Type)
+                                     && !string.IsNullOrWhiteSpace(r.Type) // Check if room type is not null or whitespace
                                      && string.Equals(r.Type.Trim(), wanted, StringComparison.OrdinalIgnoreCase)) // Check if room type matches the wanted type
                             .ToList(); // Return only available rooms of the specified type
         }
