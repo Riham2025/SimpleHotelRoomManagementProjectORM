@@ -20,13 +20,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Get all guests (no extra rules needed here)
-        public List<Guest> GetAllGuests() 
+        public List<Guest> GetAllGuests()
         {
             return _guestRepo.GetAllGuests(); // Delegate to repository
         }
 
         // Get a guest by ID (pass-through)
-        public Guest GetGuestById(int id) 
+        public Guest GetGuestById(int id)
         {
             return _guestRepo.GetGuestById(id); // Delegate to repository
         }
@@ -36,6 +36,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _guestRepo.GetGuestByEmail(email); // Delegate to repository
         }
+
+        // Register a new guest with validations (non-empty name, valid and unique email)
+        public bool RegisterGuest(string name, string email, out string error)
+        { }
 
     }
 }
