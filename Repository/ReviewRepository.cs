@@ -29,5 +29,14 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .ToList(); // Execute query and return list
 
         }
+
+        // Get review by ID
+        public Review GetReviewById(int id)
+        {
+            return _context.Reviews
+                           .Include(r => r.Guest)
+                           .FirstOrDefault(r => r.ReviewId == id);
+        }
+
     }
 }
