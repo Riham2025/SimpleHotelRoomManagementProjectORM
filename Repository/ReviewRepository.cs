@@ -81,7 +81,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             if (existing != null) // Check if the review exists
             {
                 _context.Reviews.Remove(existing); // Mark the review for deletion
-                _context.SaveChanges();
+                _context.SaveChanges(); // Save changes to the database
             }
         }
     }
