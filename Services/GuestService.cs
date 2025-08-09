@@ -129,7 +129,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // If email is unchanged, consider this a no-op success
             if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase))
             {
-                return true; // 
+                return true; // Nothing to update
             }
 
         }
