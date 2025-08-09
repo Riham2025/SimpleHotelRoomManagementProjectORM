@@ -71,10 +71,18 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Validate new number
             if (string.IsNullOrWhiteSpace(newRoomNumber)) //Check if new room number is empty
             {
-                error = "New room number cannot be empty.";
+                error = "New room number cannot be empty."; 
                 return false; // Fail fast
             }
-            
+
+            // Load existing room
+            var existing = _roomRepo.GetRoomById(roomId);
+            if (existing == null)
+            {
+                error = "Room not found.";
+                return false;
+            }
+
 
         }
     }
