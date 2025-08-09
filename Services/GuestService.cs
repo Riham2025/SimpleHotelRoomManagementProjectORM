@@ -127,9 +127,17 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // If email is unchanged, consider this a no-op success
-            if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase)) 
             {
                 return true; // Nothing to update
+            }
+
+            // Ensure uniqueness for the new email
+            var conflict = _guestRepo.GetGuestByEmail(newEmail);
+            if (conflict != null && conflict.GuestId != id)
+            {
+                error = "Another guest with this email already exists.";
+                return false;
             }
 
         }
