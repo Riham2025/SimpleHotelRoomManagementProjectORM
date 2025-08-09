@@ -12,5 +12,11 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Private field to hold the database context instance
         private readonly HotelDbContext _context;
 
+        // Constructor that receives the DbContext via dependency injection
+        public BookingRepository(HotelDbContext context)
+        {
+            _context = context; 
+        }
+
     }
 }
