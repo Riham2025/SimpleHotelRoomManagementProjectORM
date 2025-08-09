@@ -64,7 +64,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public void AddReview(Review review)
         {
             _context.Reviews.Add(review); // Add the review to the context
-            _context.SaveChanges();
+            _context.SaveChanges(); // Save changes to the database
         }
     }
 }
