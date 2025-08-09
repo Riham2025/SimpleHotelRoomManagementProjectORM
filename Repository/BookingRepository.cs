@@ -30,5 +30,15 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .ToList();              // Execute query and return list
         }
 
+        // Retrieve a booking by its ID
+        public Booking GetBookingById(int id)
+        {
+            // Return the first booking that matches the given ID, including relationships
+            return _context.Bookings
+                           .Include(b => b.Room)
+                           .Include(b => b.Guest)
+                           .FirstOrDefault(b => b.BookingId == id);
+        }
+
     }
 }
