@@ -8,7 +8,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         List<Guest> GetAllGuests(); //Return all guests
         Guest GetGuestByEmail(string email);// Return a single guest by email (or null if not found)
         Guest GetGuestById(int id);//Return a single guest by ID
-        bool RegisterGuest(string name, string email, out string error);
+        bool RegisterGuest(string name, string email, out string error); // Register a new guest with validations (non-empty name, valid and unique email)
         bool UpdateGuestEmail(int id, string newEmail, out string error);
         bool UpdateGuestName(int id, string newName, out string error);
     }
