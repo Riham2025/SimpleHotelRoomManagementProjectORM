@@ -27,7 +27,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Bookings
                            .Include(b => b.Room)   // Load the associated Room
                            .Include(b => b.Guest)  // Load the associated Guest
-                           .ToList();              
+                           .ToList();              // Execute query and return list
         }
 
     }
