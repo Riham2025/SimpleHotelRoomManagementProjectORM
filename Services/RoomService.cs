@@ -129,7 +129,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Apply and persist
-            existing.DailyRate = newRate;
+            existing.DailyRate = newRate; // Normalize input
             _roomRepo.UpdateRoom(existing);
 
         }
