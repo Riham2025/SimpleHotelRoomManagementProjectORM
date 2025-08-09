@@ -201,7 +201,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _roomRepo.GetAllRooms()
                             .Where(r => r.IsAvailable) // Filter in memory; alternatively create a repo method if you prefer server-side
-                            .ToList();
+                            .ToList(); // Return only available rooms
         }
     }
 }
