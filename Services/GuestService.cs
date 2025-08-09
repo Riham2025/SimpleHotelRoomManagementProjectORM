@@ -111,7 +111,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             error = string.Empty; // Reset error
 
-            // 
+            // Validate email format
             if (!IsValidEmail(newEmail))
             {
                 error = "New email is not valid.";
