@@ -34,7 +34,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public Review GetReviewById(int id)
         {
             return _context.Reviews // Load the associated Guest
-                           .Include(r => r.Guest) 
+                           .Include(r => r.Guest)
                            .FirstOrDefault(r => r.ReviewId == id); // Execute query and return the first match or null
         }
 
@@ -48,6 +48,9 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 
         // Calculate average rating for a guest
         public double GetAverageRatingForGuest(int guestId)
+        {
+            var query = _context.Reviews.Where(r => r.GuestId == guestId);// Filter reviews by GuestId
 
+        }
     }
 }
