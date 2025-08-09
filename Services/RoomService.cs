@@ -140,6 +140,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Set availability flag (true = available, false = unavailable)
         public bool SetAvailability(int roomId, bool isAvailable, out string error)
         {
+            error = string.Empty; // Reset error
         }
-        }
+    }
 }
