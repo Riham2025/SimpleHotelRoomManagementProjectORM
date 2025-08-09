@@ -140,6 +140,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
+            // Apply change
+            existing.Email = newEmail.Trim();
+
         }
 
     }
