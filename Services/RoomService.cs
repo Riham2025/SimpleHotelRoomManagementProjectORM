@@ -33,10 +33,19 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Validate rate (per requirements: daily rate must be >= 100)
             if (dailyRate < 100) //Check if daily rate is less than 100
             {
-                error = "Daily rate must be at least 100.";
+                error = "Daily rate must be at least 100."; 
                 return false; // Fail fast
             }
-           
+
+            // Enforce uniqueness at the service level (in addition to the DB unique index)
+            var allRooms = _roomRepo.GetAllRooms(); // Pull current rooms
+            if (allRooms.Any(r => string.Equals(r.RoomNumber?.Trim(), roomNumber.Trim(), StringComparison.OrdinalIgnoreCase)))
+            {
+                error = "A room with the same number already exists.";
+                return false;
+            }
+
+
 
         }
     }
