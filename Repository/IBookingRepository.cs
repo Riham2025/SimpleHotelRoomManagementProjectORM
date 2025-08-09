@@ -10,6 +10,6 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         List<Booking> GetAllBookings(); // Retrieve all bookings
         Booking GetBookingById(int id); // Retrieve a booking by its ID
         List<Booking> GetBookingsByGuest(int guestId); // Retrieve all bookings for a specific guest
-        void UpdateBooking(Booking booking);
+        void UpdateBooking(Booking booking); // Update an existing booking in the database
     }
 }
