@@ -205,7 +205,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Helper: list available rooms filtered by type (case-insensitive)
-        public List<Room> FindAvailableRoomsByType(string type)
+        public List<Room> FindAvailableRoomsByType(string type) // Find rooms by type
         {
             var wanted = type?.Trim(); // Normalize type
             return _roomRepo.GetAllRooms()
