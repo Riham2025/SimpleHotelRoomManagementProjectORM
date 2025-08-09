@@ -56,6 +56,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
+            // Ensure the email is unique across all guests
+            if (_guestRepo.GetGuestByEmail(email) != null)
+            {
+                error = "A guest with the same email already exists.";
+                return false;
+            }
+
 
         }
 
