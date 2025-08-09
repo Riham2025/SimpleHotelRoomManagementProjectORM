@@ -51,6 +51,11 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         {
             var query = _context.Reviews.Where(r => r.GuestId == guestId);// Filter reviews by GuestId
 
+            // Return 0 if no reviews found
+            if (!query.Any())
+                return 0.0;
+
+
         }
     }
 }
