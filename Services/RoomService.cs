@@ -187,7 +187,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Return all rooms (pass-through)
         public List<Room> GetAllRooms()
         {
-            return _roomRepo.GetAllRooms();
+            return _roomRepo.GetAllRooms(); // Delegate to repository
         }
     }
 }
