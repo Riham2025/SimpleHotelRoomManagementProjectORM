@@ -25,5 +25,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return _guestRepo.GetAllGuests(); // Delegate to repository
         }
 
+        // Get a guest by ID (pass-through)
+        public Guest GetGuestById(int id)
+        { }
+
     }
 }
