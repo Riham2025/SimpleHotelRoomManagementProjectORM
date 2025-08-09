@@ -9,7 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         List<Booking> GetActiveBookingsForRoom(int roomId, DateTime? onDate = null); // Retrieve active bookings for a specific room, optionally on a specific date
         List<Booking> GetAllBookings(); // Retrieve all bookings
         Booking GetBookingById(int id); // Retrieve a booking by its ID
-        List<Booking> GetBookingsByGuest(int guestId);
+        List<Booking> GetBookingsByGuest(int guestId); // Retrieve all bookings for a specific guest
         void UpdateBooking(Booking booking);
     }
 }
