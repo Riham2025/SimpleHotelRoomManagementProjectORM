@@ -33,7 +33,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
         // Get guest by email (pass-through)
         public Guest GetGuestByEmail(string email)
-        { }
+        {
+            return _guestRepo.GetGuestByEmail(email); // Delegate to repository
+        }
 
     }
 }
