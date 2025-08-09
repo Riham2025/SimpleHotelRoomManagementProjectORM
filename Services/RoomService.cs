@@ -66,6 +66,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Change room number with uniqueness and non-empty checks
         public bool ChangeRoomNumber(int roomId, string newRoomNumber, out string error)
         {
+            error = string.Empty; // Reset error
 
         }
     }
