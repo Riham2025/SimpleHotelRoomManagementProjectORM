@@ -41,6 +41,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public bool RegisterGuest(string name, string email, out string error)
         {
             error = string.Empty; // Initialize error output
+
+            // Basic name validation: must not be null/whitespace
+            if (string.IsNullOrWhiteSpace(name))
         }
 
     }
