@@ -41,7 +41,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var allRooms = _roomRepo.GetAllRooms(); // Pull current rooms
             if (allRooms.Any(r => string.Equals(r.RoomNumber?.Trim(), roomNumber.Trim(), StringComparison.OrdinalIgnoreCase)))
             {
-                error = "A room with the same number already exists.";
+                error = "A room with the same number already exists."; // Fail fast
                 return false;
             }
 
