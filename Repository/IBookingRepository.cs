@@ -5,7 +5,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
     public interface IBookingRepository // Interface for Booking repository
     {
         void AddBooking(Booking booking); // Add a new booking to the database
-        void DeleteBooking(int id);
+        void DeleteBooking(int id); // Delete a booking by its ID
         List<Booking> GetActiveBookingsForRoom(int roomId, DateTime? onDate = null);
         List<Booking> GetAllBookings();
         Booking GetBookingById(int id);
