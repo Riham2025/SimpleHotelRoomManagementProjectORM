@@ -65,6 +65,13 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .ToList(); // Execute query and return list
         }
 
+        // Add a new booking
+        public void AddBooking(Booking booking)
+        {
+            _context.Bookings.Add(booking); 
+            _context.SaveChanges();        
+        }
+
 
     }
 }
