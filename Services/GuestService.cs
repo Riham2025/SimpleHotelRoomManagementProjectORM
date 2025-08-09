@@ -100,6 +100,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Apply change
             existing.Name = newName.Trim();
 
+            // Save changes
+            _guestRepo.UpdateGuest(existing);
+
+
         }
 
     }
