@@ -125,6 +125,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "Guest not found."; // Fail early
                 return false;
             }
+
+            // If email is unchanged, consider this a no-op success
+            if (string.Equals(existing.Email?.Trim(), newEmail?.Trim(), System.StringComparison.OrdinalIgnoreCase))
+            {
+                return true; // 
+            }
+
         }
 
     }
