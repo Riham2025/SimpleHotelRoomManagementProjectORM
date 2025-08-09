@@ -73,6 +73,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Persist through repository
             _guestRepo.AddGuest(guest);
 
+            return true; // Registration successful
 
         }
 
