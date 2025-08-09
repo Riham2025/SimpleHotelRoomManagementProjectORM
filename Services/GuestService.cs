@@ -157,11 +157,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Check existence
             var existing = _guestRepo.GetGuestById(id);
-            if (existing == null)
+            if (existing == null) 
             {
-                error = "Guest not found.";
+                error = "Guest not found."; 
                 return false;
             }
+            // Perform deletion
+            _guestRepo.DeleteGuest(id);
         }
 
     }
