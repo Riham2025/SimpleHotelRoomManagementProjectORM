@@ -39,7 +39,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
         // Register a new guest with validations (non-empty name, valid and unique email)
         public bool RegisterGuest(string name, string email, out string error)
-        { }
+        {
+            error = string.Empty; // Initialize error output
+        }
 
     }
 }
