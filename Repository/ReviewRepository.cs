@@ -33,7 +33,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Get review by ID
         public Review GetReviewById(int id)
         {
-            return _context.Reviews
+            return _context.Reviews // Load the associated Guest
                            .Include(r => r.Guest)
                            .FirstOrDefault(r => r.ReviewId == id);
         }
