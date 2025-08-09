@@ -117,7 +117,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (newRate < 100) // Check if new rate is less than 100
             {
                 error = "Daily rate must be at least 100."; // Fail fast
-                return false;
+                return false;// Early exit
             }
             
         }
