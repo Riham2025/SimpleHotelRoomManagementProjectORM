@@ -88,6 +88,14 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "New name cannot be empty."; // Fail early
                 return false;
             }
+
+            // Load the existing entity
+            var existing = _guestRepo.GetGuestById(id);
+            if (existing == null)
+            {
+                error = "Guest not found.";
+                return false;
+            }
         }
 
     }
