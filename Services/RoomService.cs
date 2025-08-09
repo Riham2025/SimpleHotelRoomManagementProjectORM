@@ -173,6 +173,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
+            // Business rule example (future):
+            // if (_bookingRepo.GetActiveBookingsForRoom(roomId).Any()) { error = "..."; return false; }
+
         }
     }
 }
