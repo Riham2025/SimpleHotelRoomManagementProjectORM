@@ -150,7 +150,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "Room not found."; // Fail fast
                 return false; // Early exit
             }
-            
+
+            // Apply and persist
+            existing.IsAvailable = isAvailable;
+            _roomRepo.UpdateRoom(existing);
+
         }
     }
 }
