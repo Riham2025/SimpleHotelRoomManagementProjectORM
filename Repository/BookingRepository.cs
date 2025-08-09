@@ -9,7 +9,7 @@ using SimpleHotelRoomManagementProjectORM.Models;
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
     // Implements IBookingRepository using EF Core for data access
-    public class BookingRepository
+    public class BookingRepository : IBookingRepository
     {
         // Private field to hold the database context instance
         private readonly HotelDbContext _context;
