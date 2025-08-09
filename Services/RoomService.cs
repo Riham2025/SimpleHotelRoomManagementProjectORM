@@ -22,6 +22,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public bool CreateRoom(string roomNumber, string type, double dailyRate, out string error)
         {
             error = string.Empty; // Initialize error output
+
+            // Validate room number (non-empty)
+            if (string.IsNullOrWhiteSpace(roomNumber))
+            {
+                error = "Room number cannot be empty.";
+                return false; // Fail fast
+            }
         }
     }
 }
