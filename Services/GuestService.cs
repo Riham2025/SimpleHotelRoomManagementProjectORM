@@ -93,9 +93,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var existing = _guestRepo.GetGuestById(id); //Check if guest exists
             if (existing == null) //Check if guest exists
             {
-                error = "Guest not found.";
+                error = "Guest not found."; // Fail early
                 return false;
             }
+
+            // Apply change
+            existing.Name = newName.Trim();
+
         }
 
     }
