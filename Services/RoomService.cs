@@ -189,5 +189,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _roomRepo.GetAllRooms(); // Delegate to repository
         }
+
+        // Return a single room by its ID (pass-through)
+        public Room GetRoomById(int roomId)
+        {
+            return _roomRepo.GetRoomById(roomId);
+        }
     }
 }
