@@ -40,5 +40,15 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .FirstOrDefault(b => b.BookingId == id); // Execute query and return the first match or null
         }
 
+        // Retrieve all bookings for a specific guest
+        public List<Booking> GetBookingsByGuest(int guestId)
+        {
+           
+            return _context.Bookings
+                           .Include(b => b.Room)
+                           .Where(b => b.GuestId == guestId)
+                           .ToList();
+        }
+
     }
 }
