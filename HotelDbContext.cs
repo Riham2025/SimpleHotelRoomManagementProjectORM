@@ -27,18 +27,18 @@ namespace SimpleHotelRoomManagementProjectORM
             // Use Fluent API to configure Room entity
             // RoomNumber is required and limited to 10 characters, and made unique
             modelBuilder.Entity<Room>()
-                        .Property(r => r.RoomNumber)
-                        .IsRequired() 
-                        .HasMaxLength(10); 
+                        .Property(r => r.RoomNumber) // RoomNumber is required
+                        .IsRequired()  // RoomNumber cannot be null
+                        .HasMaxLength(10);  // RoomNumber cannot be null and has a maximum length of 10 characters
             modelBuilder.Entity<Room>()
-                        .HasIndex(r => r.RoomNumber)
+                        .HasIndex(r => r.RoomNumber) // Create an index on RoomNumber for faster lookups
                         .IsUnique(); // RoomNumber must be unique
 
 
             // Configure Guest entity: Name is required with a max length of 50
             modelBuilder.Entity<Guest>() 
-                        .Property(g => g.Name)
-                        .IsRequired()
+                        .Property(g => g.Name) // Name is required
+                        .IsRequired() // Name cannot be null
                         .HasMaxLength(50); // Name cannot be null and has a maximum length of 50 characters
 
             // Configure Review entity: Each review belongs to one guest
@@ -50,15 +50,15 @@ namespace SimpleHotelRoomManagementProjectORM
             // Configure Booking entity relationships
             // Each booking is linked to one room
             modelBuilder.Entity<Booking>()
-                        .HasOne(b => b.Room) 
-                        .WithMany(r => r.Bookings)
+                        .HasOne(b => b.Room) // A booking has one room 
+                        .WithMany(r => r.Bookings) // A room can have many bookings
                         .HasForeignKey(b => b.RoomId); // Foreign key in Booking table
 
             // Each booking is linked to one guest
             modelBuilder.Entity<Booking>()
-                        .HasOne(b => b.Guest)
+                        .HasOne(b => b.Guest) // A booking has one guest
                         .WithMany(g => g.Bookings) // A guest can have many bookings
-                        .HasForeignKey(b => b.GuestId); 
+                        .HasForeignKey(b => b.GuestId); // Foreign key in Booking table
 
 
         }
