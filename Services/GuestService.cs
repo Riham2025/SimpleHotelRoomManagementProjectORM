@@ -90,7 +90,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Load the existing entity
-            var existing = _guestRepo.GetGuestById(id);
+            var existing = _guestRepo.GetGuestById(id); //Check if guest exists
             if (existing == null)
             {
                 error = "Guest not found.";
