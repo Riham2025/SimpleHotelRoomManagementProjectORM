@@ -159,5 +159,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true;
 
         }
+
+        // Delete a room by ID (you can later add rules to prevent deletion if active bookings exist)
+        public bool DeleteRoom(int roomId, out string error)
+        {
+
+        }
     }
 }
