@@ -65,6 +65,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Create the entity
             var guest = new Guest
+            {
+                Name = name.Trim(),   // Normalize name
+                Email = email.Trim() 
+            };
 
 
         }
