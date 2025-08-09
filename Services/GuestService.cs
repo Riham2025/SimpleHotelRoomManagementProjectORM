@@ -44,6 +44,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Basic name validation: must not be null/whitespace
             if (string.IsNullOrWhiteSpace(name))
+            {
+                error = "Name cannot be empty."; 
+                return false; // Fail early
+            }
+
         }
 
     }
