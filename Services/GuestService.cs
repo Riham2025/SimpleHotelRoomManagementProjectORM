@@ -143,6 +143,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Apply change
             existing.Email = newEmail.Trim();
 
+            // Save changes
+            _guestRepo.UpdateGuest(existing);
+
         }
 
     }
