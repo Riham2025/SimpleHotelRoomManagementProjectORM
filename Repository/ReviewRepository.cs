@@ -55,6 +55,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             if (!query.Any())
                 return 0.0;
 
+            // Calculate average rating
+            return query.Average(r => r.Rating);
 
         }
     }
