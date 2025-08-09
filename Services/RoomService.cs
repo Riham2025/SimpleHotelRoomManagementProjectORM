@@ -89,6 +89,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return true; // No change needed
             }
 
+            // Check uniqueness against other rooms
+            var allRooms = _roomRepo.GetAllRooms();
+
 
         }
     }
