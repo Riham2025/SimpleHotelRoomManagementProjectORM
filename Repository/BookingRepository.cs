@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleHotelRoomManagementProjectORM.Repository
 {
+    // Implements IBookingRepository using EF Core for data access
     public class BookingRepository
     {
     }
