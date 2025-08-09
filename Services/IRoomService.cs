@@ -9,7 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         bool DeleteRoom(int roomId, out string error); // Delete a room by ID (may add business rules later, e.g., cannot delete if reserved)
         List<Room> FindAvailableRooms(); // Find all available rooms
         List<Room> FindAvailableRoomsByType(string type); // Find all available rooms of a specific type
-        List<Room> GetAllRooms();
+        List<Room> GetAllRooms(); // Return all rooms
         Room GetRoomById(int roomId);
         bool SetAvailability(int roomId, bool isAvailable, out string error);
         bool UpdateDailyRate(int roomId, double newRate, out string error);
