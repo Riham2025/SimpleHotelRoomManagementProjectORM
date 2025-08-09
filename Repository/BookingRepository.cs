@@ -68,7 +68,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Add a new booking
         public void AddBooking(Booking booking)
         {
-            _context.Bookings.Add(booking); 
+            _context.Bookings.Add(booking); // Add entity to context
             _context.SaveChanges();        
         }
 
