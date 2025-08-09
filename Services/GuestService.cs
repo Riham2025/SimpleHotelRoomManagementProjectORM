@@ -114,7 +114,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Validate email format
             if (!IsValidEmail(newEmail)) //Check if new email is valid
             {
-                error = "New email is not valid.";
+                error = "New email is not valid."; // Fail early
                 return false;
             }
 
@@ -122,7 +122,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var existing = _guestRepo.GetGuestById(id);//Check if guest exists
             if (existing == null)
             {
-                error = "Guest not found.";
+                error = "Guest not found."; // Fail early
                 return false;
             }
         }
