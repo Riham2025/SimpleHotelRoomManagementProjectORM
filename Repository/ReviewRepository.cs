@@ -8,5 +8,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 {
     public class ReviewRepository
     {
+
+        // Reference to database context
+        private readonly HotelDbContext _context;
     }
 }
