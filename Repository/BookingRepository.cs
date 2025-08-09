@@ -69,14 +69,25 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public void AddBooking(Booking booking)
         {
             _context.Bookings.Add(booking); // Add entity to context
-            _context.SaveChanges();         // Save changes to database
+            _context.SaveChanges();  // Save changes to database
         }
 
         // Update an existing booking
         public void UpdateBooking(Booking booking)
         {
             _context.Bookings.Update(booking); // Mark entity as modified
-            _context.SaveChanges();            // Save changes to database
+            _context.SaveChanges();  // Save changes to database
+        }
+
+        // Delete a booking by its ID
+        public void DeleteBooking(int id)
+        {
+            var existing = _context.Bookings.FirstOrDefault(b => b.BookingId == id); 
+            if (existing != null)
+            {
+                _context.Bookings.Remove(existing); 
+                _context.SaveChanges();             
+            }
         }
 
 
