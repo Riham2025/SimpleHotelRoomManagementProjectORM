@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using SimpleHotelRoomManagementProjectORM.Models;
 using SimpleHotelRoomManagementProjectORM.Repository;
@@ -176,6 +177,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Simple, pragmatic email regex; can be replaced with more robust validation if needed
             var pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            return Regex.IsMatch(email.Trim(), pattern); // Return whether it matches
 
         }
 
