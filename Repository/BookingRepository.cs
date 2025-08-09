@@ -82,7 +82,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Delete a booking by its ID
         public void DeleteBooking(int id)
         {
-            var existing = _context.Bookings.FirstOrDefault(b => b.BookingId == id); 
+            var existing = _context.Bookings.FirstOrDefault(b => b.BookingId == id); // Find entity
             if (existing != null)
             {
                 _context.Bookings.Remove(existing); 
