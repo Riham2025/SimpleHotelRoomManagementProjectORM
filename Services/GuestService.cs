@@ -106,5 +106,26 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true; // Success
         }
 
+        // Update only the email after validation and uniqueness check
+        public bool UpdateGuestEmail(int id, string newEmail, out string error)
+        {
+            error = string.Empty; // 
+
+            // 
+            if (!IsValidEmail(newEmail))
+            {
+                error = "New email is not valid.";
+                return false;
+            }
+
+            // 
+            var existing = _guestRepo.GetGuestById(id);
+            if (existing == null)
+            {
+                error = "Guest not found.";
+                return false;
+            }
+        }
+
     }
 }
