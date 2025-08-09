@@ -41,8 +41,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Get reviews for a specific guest
         public List<Review> GetReviewsForGuest(int guestId)
         {
-            return _context.Reviews
-                           .Where(r => r.GuestId == guestId)
+            return _context.Reviews // Load the associated Guest
+                           .Where(r => r.GuestId == guestId) // Filter by GuestId
                            .ToList();
         }
 
