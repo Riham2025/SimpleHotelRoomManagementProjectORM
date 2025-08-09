@@ -36,7 +36,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             // Return the first booking that matches the given ID, including relationships
             return _context.Bookings
                            .Include(b => b.Room) // Load the associated Room
-                           .Include(b => b.Guest) 
+                           .Include(b => b.Guest) // Load the associated Guest
                            .FirstOrDefault(b => b.BookingId == id);
         }
 
