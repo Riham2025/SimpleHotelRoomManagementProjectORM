@@ -73,5 +73,16 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             _context.Reviews.Update(review); // Update the review in the context
             _context.SaveChanges(); // Save changes to the database
         }
+
+        // Delete a review by ID
+        public void DeleteReview(int id)
+        {
+            var existing = _context.Reviews.FirstOrDefault(r => r.ReviewId == id);
+            if (existing != null)
+            {
+                _context.Reviews.Remove(existing);
+                _context.SaveChanges();
+            }
+        }
     }
 }
