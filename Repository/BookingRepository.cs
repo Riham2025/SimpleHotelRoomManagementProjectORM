@@ -58,7 +58,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
 
             // Get bookings that overlap with the pivot date
             return _context.Bookings
-                           .Where(b => b.RoomId == roomId
+                           .Where(b => b.RoomId == roomId // Filter by RoomId
                                     && b.CheckInDate <= pivot
                                     && b.CheckOutDate > pivot)
                            .Include(b => b.Guest) // Include guest details
