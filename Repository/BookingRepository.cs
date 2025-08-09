@@ -50,5 +50,21 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .ToList(); // Execute query and return list
         }
 
+        // Retrieve active bookings for a specific room
+        public List<Booking> GetActiveBookingsForRoom(int roomId, DateTime? onDate = null)
+        {
+          
+            var pivot = onDate ?? DateTime.Now;
+
+            
+            return _context.Bookings
+                           .Where(b => b.RoomId == roomId
+                                    && b.CheckInDate <= pivot
+                                    && b.CheckOutDate > pivot)
+                           .Include(b => b.Guest) 
+                           .ToList();
+        }
+
+
     }
 }
