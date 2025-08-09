@@ -136,5 +136,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true;
 
         }
-    }
+
+        // Set availability flag (true = available, false = unavailable)
+        public bool SetAvailability(int roomId, bool isAvailable, out string error)
+        {
+        }
+        }
 }
