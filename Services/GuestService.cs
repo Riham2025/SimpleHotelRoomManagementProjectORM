@@ -14,7 +14,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
         // Inject the repository through the constructor (DI-friendly)
         public GuestService(IGuestRepository guestRepo)
-        { }
+        {
+            _guestRepo = guestRepo; // Store the repository for later use
+        }
 
     }
 }
