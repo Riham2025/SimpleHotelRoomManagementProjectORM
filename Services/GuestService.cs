@@ -153,6 +153,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Delete a guest (you can extend with rules like: cannot delete if active bookings exist)
         public bool DeleteGuest(int id, out string error)
         {
+            error = string.Empty; // Reset error
         }
 
     }
