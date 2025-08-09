@@ -31,11 +31,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Validate rate (per requirements: daily rate must be >= 100)
-            if (dailyRate < 100)
+            if (dailyRate < 100) //Check if daily rate is less than 100
             {
                 error = "Daily rate must be at least 100.";
-                return false;
+                return false; // Fail fast
             }
+           
 
         }
     }
