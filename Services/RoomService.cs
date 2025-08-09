@@ -50,9 +50,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var room = new Room
             {
                 RoomNumber = roomNumber.Trim(), // Normalize input
-                Type = type?.Trim(),            // Optional type (e.g., Single, Double)
-                DailyRate = dailyRate,          // Validated above
-                IsAvailable = true              // New rooms are available by default
+                Type = type?.Trim(),            
+                DailyRate = dailyRate,          
+                IsAvailable = true              
             };
 
 
