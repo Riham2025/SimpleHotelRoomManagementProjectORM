@@ -67,7 +67,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var guest = new Guest
             {
                 Name = name.Trim(),   // Normalize name
-                Email = email.Trim() 
+                Email = email.Trim()  // Normalize email
             };
 
 
