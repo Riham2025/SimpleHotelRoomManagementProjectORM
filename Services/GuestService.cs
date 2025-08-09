@@ -26,10 +26,14 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Get a guest by ID (pass-through)
-        public Guest GetGuestById(int id)
+        public Guest GetGuestById(int id) 
         {
             return _guestRepo.GetGuestById(id); // Delegate to repository
         }
+
+        // Get guest by email (pass-through)
+        public Guest GetGuestByEmail(string email)
+        { }
 
     }
 }
