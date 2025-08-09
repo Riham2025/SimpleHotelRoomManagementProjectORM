@@ -46,5 +46,8 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .ToList(); // Execute query and return list
         }
 
+        // Calculate average rating for a guest
+        public double GetAverageRatingForGuest(int guestId)
+
     }
 }
