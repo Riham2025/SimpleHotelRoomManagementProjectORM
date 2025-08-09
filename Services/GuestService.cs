@@ -165,6 +165,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Perform deletion
             _guestRepo.DeleteGuest(id);
+
+            return true; // Success
         }
 
     }
