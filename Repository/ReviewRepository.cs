@@ -70,7 +70,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Update an existing review
         public void UpdateReview(Review review)
         {
-            _context.Reviews.Update(review);
+            _context.Reviews.Update(review); // Update the review in the context
             _context.SaveChanges();
         }
     }
