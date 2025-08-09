@@ -78,7 +78,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         public void DeleteReview(int id)
         {
             var existing = _context.Reviews.FirstOrDefault(r => r.ReviewId == id); // Find the review by ID
-            if (existing != null)
+            if (existing != null) // Check if the review exists
             {
                 _context.Reviews.Remove(existing);
                 _context.SaveChanges();
