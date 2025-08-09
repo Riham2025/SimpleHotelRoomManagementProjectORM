@@ -79,6 +79,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
         // Update only the name after validation
         public bool UpdateGuestName(int id, string newName, out string error)
+        {
+            error = string.Empty; // Reset error
+        }
 
     }
 }
