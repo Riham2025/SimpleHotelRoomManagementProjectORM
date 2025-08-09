@@ -53,7 +53,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         // Retrieve active bookings for a specific room
         public List<Booking> GetActiveBookingsForRoom(int roomId, DateTime? onDate = null)
         {
-          
+            // Use provided date or current time
             var pivot = onDate ?? DateTime.Now;
 
             // Get bookings that overlap with the pivot date
