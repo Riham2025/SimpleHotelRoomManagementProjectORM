@@ -10,7 +10,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         List<Room> FindAvailableRooms(); // Find all available rooms
         List<Room> FindAvailableRoomsByType(string type); // Find all available rooms of a specific type
         List<Room> GetAllRooms(); // Return all rooms
-        Room GetRoomById(int roomId);
+        Room GetRoomById(int roomId); // Return a single room by ID (or null if not found)
         bool SetAvailability(int roomId, bool isAvailable, out string error);
         bool UpdateDailyRate(int roomId, double newRate, out string error);
     }
