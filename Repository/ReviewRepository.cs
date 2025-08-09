@@ -38,5 +38,13 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
                            .FirstOrDefault(r => r.ReviewId == id); // Execute query and return the first match or null
         }
 
+        // Get reviews for a specific guest
+        public List<Review> GetReviewsForGuest(int guestId)
+        {
+            return _context.Reviews
+                           .Where(r => r.GuestId == guestId)
+                           .ToList();
+        }
+
     }
 }
