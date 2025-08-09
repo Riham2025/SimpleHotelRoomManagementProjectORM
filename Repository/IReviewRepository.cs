@@ -9,7 +9,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
         List<Review> GetAllReviews(); // Retrieve all reviews
         double GetAverageRatingForGuest(int guestId); // Calculate average rating for a guest
         Review GetReviewById(int id); // Retrieve a review by its ID
-        List<Review> GetReviewsForGuest(int guestId);
+        List<Review> GetReviewsForGuest(int guestId); // Retrieve reviews for a specific guest
         void UpdateReview(Review review);
     }
 }
