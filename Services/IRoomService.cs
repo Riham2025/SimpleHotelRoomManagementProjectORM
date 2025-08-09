@@ -6,7 +6,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
     {
         bool ChangeRoomNumber(int roomId, string newRoomNumber, out string error); // Change room number with uniqueness and non-empty checks
         bool CreateRoom(string roomNumber, string type, double dailyRate, out string error); // Create a new room after validating number uniqueness and minimum rate
-        bool DeleteRoom(int roomId, out string error);
+        bool DeleteRoom(int roomId, out string error); // Delete a room by ID (may add business rules later, e.g., cannot delete if reserved)
         List<Room> FindAvailableRooms();
         List<Room> FindAvailableRoomsByType(string type);
         List<Room> GetAllRooms();
