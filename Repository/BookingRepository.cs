@@ -47,7 +47,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Bookings
                            .Include(b => b.Room) // Load the associated Room
                            .Where(b => b.GuestId == guestId) // Filter by GuestId
-                           .ToList();
+                           .ToList(); // Execute query and return list
         }
 
     }
