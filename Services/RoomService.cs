@@ -55,6 +55,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 IsAvailable = true   // Set initial availability to true           
             };
 
+            // Persist through the repository
+            _roomRepo.AddRoom(room);
 
 
         }
