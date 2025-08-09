@@ -60,7 +60,7 @@ namespace SimpleHotelRoomManagementProjectORM.Repository
             return _context.Bookings
                            .Where(b => b.RoomId == roomId // Filter by RoomId
                                     && b.CheckInDate <= pivot // Check if booking starts before or on the pivot date
-                                    && b.CheckOutDate > pivot)
+                                    && b.CheckOutDate > pivot) // Check if booking ends after the pivot date
                            .Include(b => b.Guest) // Include guest details
                            .ToList();
         }
