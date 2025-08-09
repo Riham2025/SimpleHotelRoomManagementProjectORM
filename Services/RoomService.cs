@@ -144,6 +144,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Load existing room
             var existing = _roomRepo.GetRoomById(roomId); //Check if room exists
+
+            if (existing == null) // Check if room exists
+            {
+                error = "Room not found."; // Fail fast
+                return false; // Early exit
+            }
+            
         }
     }
 }
