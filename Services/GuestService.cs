@@ -162,6 +162,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 error = "Guest not found."; 
                 return false;
             }
+
             // Perform deletion
             _guestRepo.DeleteGuest(id);
         }
