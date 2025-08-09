@@ -76,7 +76,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             }
 
             // Load existing room
-            var existing = _roomRepo.GetRoomById(roomId);
+            var existing = _roomRepo.GetRoomById(roomId); //Check if room exists
             if (existing == null)
             {
                 error = "Room not found.";
