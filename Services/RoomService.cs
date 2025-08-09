@@ -212,7 +212,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                             .Where(r => r.IsAvailable // Check if room is available
                                      && !string.IsNullOrWhiteSpace(r.Type)
                                      && string.Equals(r.Type.Trim(), wanted, StringComparison.OrdinalIgnoreCase)) // Check if room type matches the wanted type
-                            .ToList();
+                            .ToList(); // Return only available rooms of the specified type
         }
     }
 }
