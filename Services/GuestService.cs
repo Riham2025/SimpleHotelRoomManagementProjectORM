@@ -173,6 +173,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         private static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email)) return false; // Empty is invalid
+
+            // Simple, pragmatic email regex; can be replaced with more robust validation if needed
+            var pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
         }
 
     }
