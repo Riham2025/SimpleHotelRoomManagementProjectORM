@@ -146,6 +146,8 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Save changes
             _guestRepo.UpdateGuest(existing);
 
+            return true; // Success
+
         }
 
     }
