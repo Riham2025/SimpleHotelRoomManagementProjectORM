@@ -83,9 +83,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             error = string.Empty; // Reset error
 
             // Validate new name
-            if (string.IsNullOrWhiteSpace(newName))
+            if (string.IsNullOrWhiteSpace(newName)) //Check if new name is empty
             {
-                error = "New name cannot be empty.";
+                error = "New name cannot be empty."; 
                 return false;
             }
         }
