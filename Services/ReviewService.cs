@@ -34,7 +34,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Create a new review with business validations
-        public bool AddReview(int guestId, int rating, string? comment, out string error)
+        public bool AddReview(int guestId, int rating, string? comment, out string error) 
         {
             error = string.Empty; // initialize error
 
@@ -56,7 +56,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // 3) Ensure the guest has at least one completed stay (CheckOut in the past)
             //    Your Booking model should have CheckIn/CheckOut (or CheckInDate/CheckOutDate).
             var hasCompletedStay = _bookingRepo.GetAllBookings()
-                .Any(b => b.GuestId == guestId && b.CheckOut <= DateTime.Now);
+                .Any(b => b.GuestId == guestId && b.CheckOutDate <= DateTime.Now);
 
             if (!hasCompletedStay)
             {

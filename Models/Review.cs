@@ -22,5 +22,13 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public string Comment { get; set; } // Optional comment from the guest
 
         public Guest Guest { get; set; } // Associated guest who wrote the review
+
+
+
+        
+
+
+
+
     }
 }
