@@ -112,7 +112,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             existing.Rating = newRating;
             existing.Comment = string.IsNullOrWhiteSpace(newComment) ? null : newComment.Trim();
 
-            //
+            // 4) Persist
             _reviewRepo.UpdateReview(existing);
 
             // 
