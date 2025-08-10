@@ -18,7 +18,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public BookingService(IBookingRepository bookingRepo, IRoomRepository roomRepo, IGuestRepository guestRepo)
         {
             _bookingRepository = bookingRepo; // Store the booking repository
-            _roomRepository = roomRepo; //
+            _roomRepository = roomRepo; // Store the room repository
             _guestRepository = guestRepo; // 
         }
     }
