@@ -32,7 +32,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 throw new Exception("Guest not found."); // Fail if guest does not exist
 
             // Validate room exists
-            var room = _roomRepository.GetById(roomId);
+            var room = _roomRepository.GetById(roomId); // Retrieve room by ID
             if (room == null)
                 throw new Exception("Room not found.");
 
