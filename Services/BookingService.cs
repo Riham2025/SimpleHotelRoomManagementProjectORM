@@ -59,7 +59,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 GuestId = guestId, // Associate booking with guest
                 RoomId = roomId, // Associate booking with room
                 CheckInDate = checkIn, // Set check-in date
-                CheckOutDate = checkOut
+                CheckOutDate = checkOut // Set check-out date
             };
 
             // Save booking
