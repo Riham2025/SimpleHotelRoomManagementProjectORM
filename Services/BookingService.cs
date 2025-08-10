@@ -38,7 +38,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Validate booking dates
             if (checkIn >= checkOut) // Check if check-in date is not after check-out date
-                throw new Exception("Check-out date must be after check-in date.");
+                throw new Exception("Check-out date must be after check-in date."); // Fail if dates are invalid
 
 
         }
