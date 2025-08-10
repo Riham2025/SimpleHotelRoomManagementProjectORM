@@ -44,15 +44,14 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
 
             // Check for overlapping bookings
-            var existingBookings = _bookingRepository.GetAllBookings() // Retrieve all existing bookings
-                .Where(b => b.RoomId == roomId &&
-                            ((checkIn >= b.CheckIn && checkIn < b.CheckOut) || // Check if new check-in overlaps with existing bookings
-                             (checkOut > b.CheckIn && checkOut <= b.CheckOut) || // Check if new check-out overlaps with existing bookings
-                             (checkIn <= b.CheckIn && checkOut >= b.CheckOut))) // Check if new booking completely overlaps with existing bookings
-                .ToList();// Convert to list
-
-            if (existingBookings.Any()) // If there are any overlapping bookings
+            var overlaps = _bookingRepository.GetAllBookings()
+     .Where(b => b.RoomId == roomId &&
+                 checkIn < b.CheckOutDate && b.CheckInDate < checkOut)
+     .Any();
+            if (overlaps) // If there are overlapping bookings
                 throw new Exception("Room is already booked for the selected dates."); // Fail if room is already booked
+
+
 
             // Create new booking object
             Booking newBooking = new Booking
@@ -87,13 +86,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found."); // Fail if booking does not exist
 
-            _bookingRepository.Delete(bookingId); // Delete the booking by ID
+            _bookingRepository.DeleteBooking(bookingId); // Delete the booking by ID
         }
 
         // Update booking dates
         public void UpdateBookingDates(int bookingId, DateTime newCheckIn, DateTime newCheckOut) // Update booking dates
         {
-            var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
+            var booking = _bookingRepository.GetBookingById(bookingId); // Retrieve booking by ID
             if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found."); // Fail if booking does not exist
 
@@ -116,7 +115,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             booking.CheckIn = newCheckIn; // Set the new check-in date
             booking.CheckOut = newCheckOut; // Set the new check-out date
 
-            _bookingRepository.Update(booking); // Save updated booking
+            _bookingRepository.UpdateBooking(booking); // Save updated booking
 
         }
     }
