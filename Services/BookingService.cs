@@ -112,7 +112,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // Update booking details
             booking.CheckInDate = newCheckIn;
             booking.CheckOutDate = newCheckOut;
-            
+
 
             _bookingRepository.UpdateBooking(booking); // Save updated booking
 
