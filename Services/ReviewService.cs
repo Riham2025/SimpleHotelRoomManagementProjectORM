@@ -16,7 +16,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // We also need bookings to validate "guest has stayed before"
         private readonly IBookingRepository _bookingRepo;// To access bookings for reviews
 
+        // guests to validate existence
         private readonly IGuestRepository _guestRepo; // To access guests for reviews
 
+        // (e.g., do not allow more than one review per 24h per guest)
+        private readonly TimeSpan _antiSpamWindow = TimeSpan.FromHours(24); 
     }
 }
