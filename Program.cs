@@ -57,12 +57,12 @@ namespace SimpleHotelRoomManagementProjectORM
 
                         if (!double.TryParse(rateInput, out rate))        
                         {
-                            Console.WriteLine(" Invalid rate.");           
+                            Console.WriteLine(" Invalid rate."); // Invalid input for rate          
                             break;                                         
                         }
 
                         string roomError;                                 
-                        bool roomOk = roomService.CreateRoom(rNum, rType, rate, out roomError); 
+                        bool roomOk = roomService.CreateRoom(rNum, rType, rate, out roomError); // Create a new room using the service
 
                         if (roomOk)                                      
                             Console.WriteLine(" Room added successfully!");
