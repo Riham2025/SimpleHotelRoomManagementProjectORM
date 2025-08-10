@@ -20,6 +20,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         private readonly IGuestRepository _guestRepo; // To access guests for reviews
 
         // (e.g., do not allow more than one review per 24h per guest)
-        private readonly TimeSpan _antiSpamWindow = TimeSpan.FromHours(24); 
+        private readonly TimeSpan _antiSpamWindow = TimeSpan.FromHours(24);
+
+        // Constructor injection for dependencies (DI-friendly)
+        public ReviewService(IReviewRepository reviewRepo,
+                             IBookingRepository bookingRepo,
+                             IGuestRepository guestRepo)
     }
 }
