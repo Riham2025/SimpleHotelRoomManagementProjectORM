@@ -8,7 +8,7 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public class ReviewService 
+    public class ReviewService : IReviewService
     {
 
         // Reference to review data-access
@@ -89,7 +89,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Update an existing review's rating/comment
-        public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error) 
+        public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error)
         {
             error = string.Empty; // reset error
 
