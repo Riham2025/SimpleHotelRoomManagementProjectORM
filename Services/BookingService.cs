@@ -33,7 +33,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Validate room exists
             var room = _roomRepository.GetById(roomId); // Retrieve room by ID
-            if (room == null)
+            if (room == null) // Check if room exists
                 throw new Exception("Room not found.");
 
         }
