@@ -65,7 +65,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         bool roomOk = roomService.CreateRoom(rNum, rType, rate, out roomError); // Create a new room using the service
 
                         if (roomOk)                                      
-                            Console.WriteLine(" Room added successfully!");
+                            Console.WriteLine(" Room added successfully!"); // Room creation successful
                         else
                             Console.WriteLine($" Error: {roomError}");
                         break;
