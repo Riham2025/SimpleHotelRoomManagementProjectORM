@@ -155,7 +155,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Compute average rating for a guest (pass-through to repo or calculated here)
         public double GetAverageRatingForGuest(int guestId)
         {
-            // 
+            // Either call the repository method or compute locally
             return _reviewRepo.GetAverageRatingForGuest(guestId);
         }
     }
