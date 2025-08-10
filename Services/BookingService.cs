@@ -13,5 +13,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         private readonly IBookingRepository _bookingRepository;  // To interact with booking data storage
         private readonly IRoomRepository _roomRepository; // To interact with room data
         private readonly IGuestRepository _guestRepository; // To interact with guest data
-    }
+
+        // Constructor for dependency injection
+        public BookingService(IBookingRepository bookingRepo, IRoomRepository roomRepo, IGuestRepository guestRepo)
+        {
+        }
 }
