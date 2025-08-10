@@ -52,7 +52,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         string rType = Console.ReadLine(); // Read room type input from user        
 
                         Console.Write("Enter Daily Rate: ");          
-                        string rateInput = Console.ReadLine();              
+                        string rateInput = Console.ReadLine(); // Read daily rate input from user             
                         double rate;                                       
 
                         if (!double.TryParse(rateInput, out rate))        
