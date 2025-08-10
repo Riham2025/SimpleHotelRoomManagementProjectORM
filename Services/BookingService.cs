@@ -99,6 +99,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (newCheckIn >= newCheckOut) 
                 throw new Exception("Check-out date must be after check-in date."); // Fail if dates are invalid
 
+            // Check for overlapping bookings excluding current booking
+            var existingBookings = _bookingRepository.GetAll()
+                .Where(b => b.RoomId == booking.RoomId &&
+                            b.BookingId != bookingId &&
+                            ((newCheckIn >= b.CheckIn && newCheckIn < b.CheckOut) ||
+                             (newCheckOut > b.CheckIn && newCheckOut <= b.CheckOut) ||
+                             (newCheckIn <= b.CheckIn && newCheckOut >= b.CheckOut)))
+                .ToList();
+
         }
     }
 }
