@@ -80,7 +80,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Cancel booking
-        public void CancelBooking(int bookingId)
+        public void CancelBooking(int bookingId) 
         {
             var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
             if (booking == null) // Check if booking exists
@@ -93,7 +93,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public void UpdateBookingDates(int bookingId, DateTime newCheckIn, DateTime newCheckOut) // Update booking dates
         {
             var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
-            if (booking == null)
+            if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found.");
 
             if (newCheckIn >= newCheckOut)
