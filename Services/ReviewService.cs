@@ -29,7 +29,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             _reviewRepo = reviewRepo;   // store review repository
             _bookingRepo = bookingRepo;  // store booking repository
-            _guestRepo = guestRepo;    
+            _guestRepo = guestRepo;    // store guest repository
         }
     }
 }
