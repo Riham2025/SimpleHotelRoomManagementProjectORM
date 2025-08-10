@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +26,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Create a new booking
         public void CreateBooking(int guestId, int roomId, DateTime checkIn, DateTime checkOut)
         {
+            // Validate guest exists
+            var guest = _guestRepository.GetById(guestId);
+            if (guest == null)
+                throw new Exception("Guest not found.");
+
         }
+    }
 }
