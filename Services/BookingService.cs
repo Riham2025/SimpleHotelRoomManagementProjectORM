@@ -36,6 +36,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (room == null) // Check if room exists
                 throw new Exception("Room not found."); // Fail if room does not exist
 
+            // Validate booking dates
+            if (checkIn >= checkOut)
+                throw new Exception("Check-out date must be after check-in date.");
+
+
         }
     }
 }
