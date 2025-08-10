@@ -141,7 +141,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Return all reviews (pass-through)
-        public List<Review> GetAllReviews()
+        public List<Review> GetAllReviews() // Pass-through to repository
         {
             return _reviewRepo.GetAllReviews();
         }
