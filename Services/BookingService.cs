@@ -108,6 +108,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                              (newCheckIn <= b.CheckIn && newCheckOut >= b.CheckOut))) // Check if new booking completely overlaps with existing bookings
                 .ToList(); // Convert to list
 
+            if (existingBookings.Any()) // If there are any overlapping bookings
+                throw new Exception("Room is already booked for the new dates.");
+
+
         }
     }
 }
