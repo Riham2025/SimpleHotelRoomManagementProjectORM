@@ -78,5 +78,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _bookingRepository.GetById(bookingId); // Retrieve booking by ID
         }
+
+        // Cancel booking
+        public void CancelBooking(int bookingId)
+        {
+            var booking = _bookingRepository.GetById(bookingId);
+            if (booking == null)
+                throw new Exception("Booking not found.");
+
+            _bookingRepository.Delete(bookingId);
+        }
     }
 }
