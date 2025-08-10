@@ -12,7 +12,7 @@ namespace SimpleHotelRoomManagementProjectORM
 
             RoomRepository roomRepo = new RoomRepository(dbContext); // Room repository
             GuestRepository guestRepo = new GuestRepository(dbContext);// Guest repository
-            BookingRepository bookingRepo = new BookingRepository(dbContext);
+            BookingRepository bookingRepo = new BookingRepository(dbContext);// Booking repository
             ReviewRepository reviewRepo = new ReviewRepository(dbContext);    
 
 
