@@ -21,5 +21,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             _roomRepository = roomRepo; // Store the room repository
             _guestRepository = guestRepo; // Store the guest repository
         }
-    }
+
+        // Create a new booking
+        public void CreateBooking(int guestId, int roomId, DateTime checkIn, DateTime checkOut)
+        {
+        }
 }
