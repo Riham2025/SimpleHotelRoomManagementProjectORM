@@ -93,7 +93,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             error = string.Empty; // reset error
 
-            // 
+            // 1) Load existing review
             var existing = _reviewRepo.GetReviewById(reviewId);
             if (existing == null)
             {
