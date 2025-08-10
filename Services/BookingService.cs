@@ -105,7 +105,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                             b.BookingId != bookingId && // Exclude current booking
                             ((newCheckIn >= b.CheckIn && newCheckIn < b.CheckOut) || // Check if new check-in overlaps with existing bookings
                              (newCheckOut > b.CheckIn && newCheckOut <= b.CheckOut) || // Check if new check-out overlaps with existing bookings
-                             (newCheckIn <= b.CheckIn && newCheckOut >= b.CheckOut)))
+                             (newCheckIn <= b.CheckIn && newCheckOut >= b.CheckOut))) // Check if new booking completely overlaps with existing bookings
                 .ToList();
 
         }
