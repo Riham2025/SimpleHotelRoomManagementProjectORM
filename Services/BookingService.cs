@@ -31,6 +31,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (guest == null) // Check if guest exists
                 throw new Exception("Guest not found."); // Fail if guest does not exist
 
+            // Validate room exists
+            var room = _roomRepository.GetById(roomId);
+            if (room == null)
+                throw new Exception("Room not found.");
+
         }
     }
 }
