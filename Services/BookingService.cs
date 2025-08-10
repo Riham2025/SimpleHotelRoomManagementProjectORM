@@ -111,6 +111,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (existingBookings.Any()) // If there are any overlapping bookings
                 throw new Exception("Room is already booked for the new dates."); // Fail if room is already booked
 
+            // Update booking details
+            booking.CheckIn = newCheckIn;
+            booking.CheckOut = newCheckOut;
+
+            _bookingRepository.Update(booking);
 
         }
     }
