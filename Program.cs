@@ -138,7 +138,7 @@ namespace SimpleHotelRoomManagementProjectORM
 
 
 
-                    case "4":                                            
+                    case "4":   // ADD REVIEW                                         
                         Console.Write("Enter Guest ID: ");
                         string revGuestIdInput = Console.ReadLine();
                         int revGuestId;
