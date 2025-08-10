@@ -47,7 +47,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                             ((checkIn >= b.CheckIn && checkIn < b.CheckOut) || // Check if new check-in overlaps with existing bookings
                              (checkOut > b.CheckIn && checkOut <= b.CheckOut) || // Check if new check-out overlaps with existing bookings
                              (checkIn <= b.CheckIn && checkOut >= b.CheckOut))) // Check if new booking completely overlaps with existing bookings
-                .ToList();
+                .ToList();// Convert to list
 
         }
     }
