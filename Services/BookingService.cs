@@ -94,7 +94,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
             if (booking == null) // Check if booking exists
-                throw new Exception("Booking not found.");
+                throw new Exception("Booking not found."); // Fail if booking does not exist
 
             if (newCheckIn >= newCheckOut)
                 throw new Exception("Check-out date must be after check-in date.");
