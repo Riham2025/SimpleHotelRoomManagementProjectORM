@@ -13,8 +13,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Reference to review data-access
         private readonly IReviewRepository _reviewRepo;
 
+        // We also need bookings to validate "guest has stayed before"
         private readonly IBookingRepository _bookingRepo;// To access bookings for reviews
 
+        private readonly IGuestRepository _guestRepo; // To access guests for reviews
 
     }
 }
