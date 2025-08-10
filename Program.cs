@@ -169,7 +169,7 @@ namespace SimpleHotelRoomManagementProjectORM
                             Console.WriteLine($" Error: {reviewError}");
                         break;
 
-                    case "5":                                            
+                    case "5": // LIST ROOMS                                           
                         System.Collections.Generic.List<Room> rooms = roomService.GetAllRooms(); 
                         Console.WriteLine("\n--- Rooms ---");
                         foreach (Room room in rooms)                        
