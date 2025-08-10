@@ -1,4 +1,5 @@
 ﻿using SimpleHotelRoomManagementProjectORM.Repository;
+using SimpleHotelRoomManagementProjectORM.Services;
 
 namespace SimpleHotelRoomManagementProjectORM
 {
@@ -15,6 +16,11 @@ namespace SimpleHotelRoomManagementProjectORM
             BookingRepository bookingRepo = new BookingRepository(dbContext);// Booking repository
             ReviewRepository reviewRepo = new ReviewRepository(dbContext); // Review repository   
 
+
+            RoomService roomService = new RoomService(roomRepo);// Room service (business logic for rooms)
+            GuestService guestService = new GuestService(guestRepo); 
+            BookingService bookingService = new BookingService(bookingRepo, roomRepo, guestRepo); 
+            ReviewService reviewService = new ReviewService(reviewRepo, bookingRepo, guestRepo); 
 
 
         }
