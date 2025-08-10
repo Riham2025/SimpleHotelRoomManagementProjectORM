@@ -53,7 +53,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
-            // 
+            // 3) Ensure the guest has at least one completed stay (CheckOut in the past)
             //    Your Booking model should have CheckIn/CheckOut (or CheckInDate/CheckOutDate).
             var hasCompletedStay = _bookingRepo.GetAllBookings()
                 .Any(b => b.GuestId == guestId && b.CheckOut <= DateTime.Now);
