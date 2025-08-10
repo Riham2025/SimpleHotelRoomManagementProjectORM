@@ -78,7 +78,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 GuestId = guestId,                  // link to the author
                 Rating = rating,                   // validated 1..5
                 Comment = string.IsNullOrWhiteSpace(comment) ? null : comment.Trim()
-                
+                // Add CreatedAt = DateTime.Now;  // if you extend the model
             };
 
            
