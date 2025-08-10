@@ -79,7 +79,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         string gEmail = Console.ReadLine(); // Read guest email input from user                 
 
                         string guestError; // Initialize error message for guest registration                               
-                        bool guestOk = guestService.RegisterGuest(gName, gEmail, out guestError); 
+                        bool guestOk = guestService.RegisterGuest(gName, gEmail, out guestError); // Register a new guest using the service
 
                         if (guestOk)
                             Console.WriteLine(" Guest registered successfully!");
