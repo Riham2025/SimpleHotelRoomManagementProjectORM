@@ -8,7 +8,7 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public class ReviewService : IReviewService
+    public class ReviewService 
     {
 
         // Reference to review data-access
@@ -89,12 +89,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Update an existing review's rating/comment
-        public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error)
+        public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error) 
         {
             error = string.Empty; // reset error
 
             // 1) Load existing review
-            var existing = _reviewRepo.GetReviewById(reviewId);
+            var existing = _reviewRepo.GetReviewById(reviewId); // Get the review by ID
             if (existing == null)
             {
                 error = "Review not found.";
