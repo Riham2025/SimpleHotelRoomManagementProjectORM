@@ -64,7 +64,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
-            // 
+            // 4) Optional anti-spam: block if the guest posted a review too recently
             //    (Since Review model has no CreatedAt, you could add it; for now we can emulate by
             //     assuming the repository can sort by insertion order or you extend the model later.)
             //    If you add a DateTime CreatedAt to Review, use this:
