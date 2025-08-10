@@ -134,7 +134,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // 2) You could enforce policy here (e.g., only author or admin can delete)
 
-            // 
+            // 3) Perform deletion
             _reviewRepo.DeleteReview(reviewId);
 
             return true; // success
