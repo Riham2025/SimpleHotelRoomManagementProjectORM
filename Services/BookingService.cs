@@ -27,7 +27,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public void CreateBooking(int guestId, int roomId, DateTime checkIn, DateTime checkOut)
         {
             // Validate guest exists
-            var guest = _guestRepository.GetById(guestId);
+            var guest = _guestRepository.GetById(guestId); // Retrieve guest by ID
             if (guest == null)
                 throw new Exception("Guest not found.");
 
