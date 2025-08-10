@@ -119,5 +119,33 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true;
         }
 
+        // Delete a review by its ID
+        public bool DeleteReview(int reviewId, out string error)
+        {
+            error = string.Empty; // reset
+
+            // 1) 
+            var existing = _reviewRepo.GetReviewById(reviewId);
+            if (existing == null)
+            {
+                error = "Review not found.";
+                return false;
+            }
+
+            // 2) You could enforce policy here (e.g., only author or admin can delete)
+
+            // 
+            _reviewRepo.DeleteReview(reviewId);
+
+            return true; // success
+        }
+
+        // 
+        public List<Review> GetAllReviews()
+        {
+            return _reviewRepo.GetAllReviews();
+        }
+
+
     }
 }
