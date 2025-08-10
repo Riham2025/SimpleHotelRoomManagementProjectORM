@@ -91,7 +91,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Update an existing review's rating/comment
         public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error)
         {
-            error = string.Empty; //
+            error = string.Empty; // reset error
 
             // 
             var existing = _reviewRepo.GetReviewById(reviewId);
