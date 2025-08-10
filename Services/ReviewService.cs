@@ -26,5 +26,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public ReviewService(IReviewRepository reviewRepo,
                              IBookingRepository bookingRepo,
                              IGuestRepository guestRepo)
+        {
+            _reviewRepo = reviewRepo;   // store review repository
+            _bookingRepo = bookingRepo;  
+            _guestRepo = guestRepo;    
+        }
     }
 }
