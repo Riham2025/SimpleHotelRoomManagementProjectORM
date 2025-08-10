@@ -124,7 +124,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             error = string.Empty; // reset
 
-            // 1) 
+            // 1) Ensure exists
             var existing = _reviewRepo.GetReviewById(reviewId);
             if (existing == null)
             {
