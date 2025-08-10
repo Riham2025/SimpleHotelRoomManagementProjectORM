@@ -76,7 +76,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Get booking by ID
         public Booking GetBookingById(int bookingId)
         {
-            return _bookingRepository.GetById(bookingId);
+            return _bookingRepository.GetById(bookingId); // Retrieve booking by ID
         }
     }
 }
