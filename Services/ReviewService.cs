@@ -36,7 +36,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Create a new review with business validations
         public bool AddReview(int guestId, int rating, string? comment, out string error)
         {
-            error = string.Empty; // 
+            error = string.Empty; // initialize error
 
             // 
             var guest = _guestRepo.GetGuestById(guestId);
