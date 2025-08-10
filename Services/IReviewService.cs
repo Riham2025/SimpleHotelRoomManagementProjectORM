@@ -9,6 +9,6 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         List<Review> GetAllReviews(); // Return all reviews
         double GetAverageRatingForGuest(int guestId); // Compute average rating for a guest
         List<Review> GetReviewsForGuest(int guestId); // Return reviews for a specific guest
-        bool UpdateReview(int reviewId, int newRating, string? newComment, out string error);
+        bool UpdateReview(int reviewId, int newRating, string? newComment, out string error); // Update an existing review with validations (rating range, comment length, etc.)
     }
 }
