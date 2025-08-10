@@ -22,6 +22,8 @@ namespace SimpleHotelRoomManagementProjectORM
             BookingService bookingService = new BookingService(bookingRepo, roomRepo, guestRepo); // Booking service (business logic for bookings)
             ReviewService reviewService = new ReviewService(reviewRepo, bookingRepo, guestRepo);// Review service (business logic for reviews)
 
+            // ===================== SIMPLE INTERACTIVE MENU =====================
+
 
         }
     }
