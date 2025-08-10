@@ -101,7 +101,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Check for overlapping bookings excluding current booking
             var existingBookings = _bookingRepository.GetAll() // Retrieve all existing bookings
-                .Where(b => b.RoomId == booking.RoomId &&
+                .Where(b => b.RoomId == booking.RoomId && // Check if booking is for the same room
                             b.BookingId != bookingId &&
                             ((newCheckIn >= b.CheckIn && newCheckIn < b.CheckOut) ||
                              (newCheckOut > b.CheckIn && newCheckOut <= b.CheckOut) ||
