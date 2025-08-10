@@ -107,11 +107,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
     .Any();
 
             if (conflict)
-                throw new Exception("Room is already booked for the new dates."); 
+                throw new Exception("Room is already booked for the new dates.");
 
             // Update booking details
-            booking.CheckIn = newCheckIn; // Set the new check-in date
-            booking.CheckOut = newCheckOut; // Set the new check-out date
+            booking.CheckInDate = newCheckIn;
+            booking.CheckOutDate = newCheckOut;
+            
 
             _bookingRepository.UpdateBooking(booking); // Save updated booking
 
