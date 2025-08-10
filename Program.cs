@@ -124,7 +124,7 @@ namespace SimpleHotelRoomManagementProjectORM
                             break;
                         }
 
-                        if (checkIn >= checkOut)
+                        if (checkIn >= checkOut) // Check if check-in date is not after check-out date
                         {
                             Console.WriteLine(" Check-out must be after Check-in.");
                             break;
