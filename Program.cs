@@ -142,7 +142,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         Console.Write("Enter Guest ID: ");
                         string revGuestIdInput = Console.ReadLine();
                         int revGuestId;
-                        if (!int.TryParse(revGuestIdInput, out revGuestId))
+                        if (!int.TryParse(revGuestIdInput, out revGuestId)) // Parse guest ID input to integer
                         {
                             Console.WriteLine(" Invalid Guest ID.");
                             break;
