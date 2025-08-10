@@ -178,7 +178,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         }
                         break;
 
-                    case "6":                                             
+                    case "6": // LIST GUESTS                                            
                         System.Collections.Generic.List<Guest> guests = guestService.GetAllGuests(); 
                         Console.WriteLine("\n--- Guests ---");
                         foreach (Guest guest in guests)
