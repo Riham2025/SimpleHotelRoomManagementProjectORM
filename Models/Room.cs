@@ -27,6 +27,11 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         // Additional properties can be added as needed
 
         public string Type { get; set; } // Type of room (e.g., "Single", "Double", "Suite")
+        public bool IsAvailable { get; set; } // Indicates if the room is available for booking
+
+
+
+
 
     }
 }
