@@ -72,7 +72,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             //                  .Any(r => r.CreatedAt >= DateTime.Now.Subtract(_antiSpamWindow));
             //    if (recent) { error = "Please wait before posting another review."; return false; }
 
-            
+            // 5) Create entity (trim the comment; allow nulls)
             var review = new Review
             {
                 GuestId = guestId,                  // 
