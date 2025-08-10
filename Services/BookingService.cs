@@ -54,9 +54,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 throw new Exception("Room is already booked for the selected dates."); // Fail if room is already booked
 
             // Create new booking object
-            Booking newBooking = new Booking
+            Booking newBooking = new Booking 
             {
-                GuestId = guestId,
+                GuestId = guestId, // Set the guest ID
                 RoomId = roomId,
                 CheckIn = checkIn,
                 CheckOut = checkOut
