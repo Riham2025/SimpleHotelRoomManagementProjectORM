@@ -95,7 +95,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // 1) Load existing review
             var existing = _reviewRepo.GetReviewById(reviewId); // Get the review by ID
-            if (existing == null)
+            if (existing == null) // Check if review exists
             {
                 error = "Review not found.";
                 return false;
