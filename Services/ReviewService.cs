@@ -128,7 +128,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var existing = _reviewRepo.GetReviewById(reviewId); // Get the review by ID
             if (existing == null) // Check if review exists
             {
-                error = "Review not found.";
+                error = "Review not found."; // Fail fast
                 return false;
             }
 
@@ -147,11 +147,19 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Return reviews for a specific guest (pass-through)
-        public List<Review> GetReviewsForGuest(int guestId)
+        public List<Review> GetReviewsForGuest(int guestId) // Pass-through to repository
         {
-            return _reviewRepo.GetReviewsForGuest(guestId);
+            return _reviewRepo.GetReviewsForGuest(guestId); // Delegate to repository
         }
 
-
+        // Compute average rating for a guest (pass-through to repo or calculated here)
+        public double GetAverageRatingForGuest(int guestId)
+        {
+            // 
+            return _reviewRepo.GetAverageRatingForGuest(guestId);
+        }
     }
+
+
 }
+
