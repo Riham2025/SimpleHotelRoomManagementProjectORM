@@ -8,7 +8,7 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public  class ReviewService
+    public class ReviewService : IReviewService
     {
 
         // Reference to review data-access
@@ -34,7 +34,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Create a new review with business validations
-        public bool AddReview(int guestId, int rating, string? comment, out string error) 
+        public bool AddReview(int guestId, int rating, string? comment, out string error)
         {
             error = string.Empty; // initialize error
 
@@ -87,5 +87,37 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // 7) Success
             return true;
         }
+
+        // Update an existing review's rating/comment
+        public bool UpdateReview(int reviewId, int newRating, string? newComment, out string error)
+        {
+            error = string.Empty; //
+
+            // 
+            var existing = _reviewRepo.GetReviewById(reviewId);
+            if (existing == null)
+            {
+                error = "Review not found.";
+                return false;
+            }
+
+            // 
+            if (newRating < 1 || newRating > 5)
+            {
+                error = "Rating must be between 1 and 5.";
+                return false;
+            }
+
+            // 
+            existing.Rating = newRating;
+            existing.Comment = string.IsNullOrWhiteSpace(newComment) ? null : newComment.Trim();
+
+            //
+            _reviewRepo.UpdateReview(existing);
+
+            // 
+            return true;
+        }
+
     }
 }
