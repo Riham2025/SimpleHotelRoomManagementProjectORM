@@ -28,6 +28,6 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         public Guest Guest { get; set; } // Associated guest for the booking
 
         // Additional properties can be added as needed
-
+        public DateTime CheckInDate { get; set; } // Check-in date for the booking
     }
 }
