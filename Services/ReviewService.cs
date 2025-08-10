@@ -146,6 +146,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return _reviewRepo.GetAllReviews();
         }
 
+        // Return reviews for a specific guest (pass-through)
+        public List<Review> GetReviewsForGuest(int guestId)
+        {
+            return _reviewRepo.GetReviewsForGuest(guestId);
+        }
+
 
     }
 }
