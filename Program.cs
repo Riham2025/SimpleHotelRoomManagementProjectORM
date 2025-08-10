@@ -31,7 +31,7 @@ namespace SimpleHotelRoomManagementProjectORM
             {
                 Console.WriteLine("\n=== Hotel Management Menu ===");     
                 Console.WriteLine("1. Add Room"); // Add a new room to the system                        
-                Console.WriteLine("2. Register Guest");                   
+                Console.WriteLine("2. Register Guest"); // Register a new guest in the system                  
                 Console.WriteLine("3. Make Booking");                      
                 Console.WriteLine("4. Add Review");                        
                 Console.WriteLine("5. List Rooms");                        
