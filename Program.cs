@@ -72,7 +72,8 @@ namespace SimpleHotelRoomManagementProjectORM
 
                     case "2": // REGISTER GUEST                                             
                         Console.Write("Enter Guest Name: "); // Read guest name input from user              
-                        string gName = Console.ReadLine();                  
+                        string gName = Console.ReadLine(); // Read guest name input from user
+
 
                         Console.Write("Enter Guest Email: ");              
                         string gEmail = Console.ReadLine();                 
