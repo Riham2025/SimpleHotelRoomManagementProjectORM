@@ -36,8 +36,8 @@ namespace SimpleHotelRoomManagementProjectORM
                 Console.WriteLine("4. Add Review");// Add a review for a guest's stay in a room                        
                 Console.WriteLine("5. List Rooms"); // List all rooms in the system                       
                 Console.WriteLine("6. List Guests"); // List all guests in the system                       
-                Console.WriteLine("7. Exit");                              
-                Console.Write("Choose an option: ");                      
+                Console.WriteLine("7. Exit"); // Exit the application                              
+                Console.Write("Choose an option: "); // Prompt user for a choice                     
 
                 string choice = Console.ReadLine();                       
                 Console.WriteLine();                                      
