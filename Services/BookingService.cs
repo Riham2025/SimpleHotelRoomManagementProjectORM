@@ -70,7 +70,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Get all bookings
         public List<Booking> GetAllBookings()
         {
-            return _bookingRepository.GetAll();
+            return _bookingRepository.GetAll(); // Retrieve all bookings from the repository
         }
     }
 }
