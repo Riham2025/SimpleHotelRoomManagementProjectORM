@@ -86,7 +86,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found."); // Fail if booking does not exist
 
-            _bookingRepository.Delete(bookingId);
+            _bookingRepository.Delete(bookingId); // Delete the booking by ID
         }
     }
 }
