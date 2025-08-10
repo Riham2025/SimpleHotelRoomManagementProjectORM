@@ -84,7 +84,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // 6) Persist through repository
             _reviewRepo.AddReview(review);
 
-          
+            // 7) Success
             return true;
         }
     }
