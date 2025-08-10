@@ -26,5 +26,8 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         // Navigation properties
         public Room Room { get; set; } // Associated room for the booking
         public Guest Guest { get; set; } // Associated guest for the booking
+
+        // Additional properties can be added as needed
+
     }
 }
