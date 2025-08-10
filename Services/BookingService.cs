@@ -92,7 +92,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Update booking dates
         public void UpdateBookingDates(int bookingId, DateTime newCheckIn, DateTime newCheckOut)
         {
-            var booking = _bookingRepository.GetById(bookingId);
+            var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
             if (booking == null)
                 throw new Exception("Booking not found.");
 
