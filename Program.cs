@@ -39,12 +39,12 @@ namespace SimpleHotelRoomManagementProjectORM
                 Console.WriteLine("7. Exit"); // Exit the application                              
                 Console.Write("Choose an option: "); // Prompt user for a choice                     
 
-                string choice = Console.ReadLine();                       
+                string choice = Console.ReadLine(); // Read user input for menu choice                      
                 Console.WriteLine();                                      
 
                 switch (choice)                                           
                 {
-                    case "1":                                             
+                    case "1":  // ADD ROOM                                           
                         Console.Write("Enter Room Number: ");              
                         string rNum = Console.ReadLine();                
 
