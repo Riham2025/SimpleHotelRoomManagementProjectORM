@@ -2,7 +2,7 @@
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public interface IReviewService
+    public interface IReviewService // High-level contract for Review operations
     {
         bool AddReview(int guestId, int rating, string? comment, out string error);
         bool DeleteReview(int reviewId, out string error);
