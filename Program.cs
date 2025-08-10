@@ -163,7 +163,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         string reviewError;                            
                         bool reviewOk = reviewService.AddReview(revGuestId, rating, comment, out reviewError); 
 
-                        if (reviewOk)
+                        if (reviewOk) // Review added successfully
                             Console.WriteLine(" Review added successfully!");
                         else
                             Console.WriteLine($" Error: {reviewError}");
