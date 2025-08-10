@@ -70,7 +70,7 @@ namespace SimpleHotelRoomManagementProjectORM
                             Console.WriteLine($" Error: {roomError}");
                         break;
 
-                    case "2":                                              
+                    case "2": // REGISTER GUEST                                             
                         Console.Write("Enter Guest Name: ");               
                         string gName = Console.ReadLine();                  
 
