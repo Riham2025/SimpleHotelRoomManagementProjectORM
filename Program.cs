@@ -67,7 +67,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         if (roomOk)                                      
                             Console.WriteLine(" Room added successfully!"); // Room creation successful
                         else
-                            Console.WriteLine($" Error: {roomError}");
+                            Console.WriteLine($" Error: {roomError}"); // Display error if room creation failed
                         break;
 
                     case "2": // REGISTER GUEST                                             
