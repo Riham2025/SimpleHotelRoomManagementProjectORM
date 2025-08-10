@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleHotelRoomManagementProjectORM.Models;
 using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
@@ -51,6 +52,15 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             if (existingBookings.Any()) // If there are any overlapping bookings
                 throw new Exception("Room is already booked for the selected dates."); // Fail if room is already booked
+
+            // Create new booking object
+            Booking newBooking = new Booking
+            {
+                GuestId = guestId,
+                RoomId = roomId,
+                CheckIn = checkIn,
+                CheckOut = checkOut
+            };
 
         }
     }
