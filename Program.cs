@@ -46,7 +46,7 @@ namespace SimpleHotelRoomManagementProjectORM
                 {
                     case "1":  // ADD ROOM                                           
                         Console.Write("Enter Room Number: ");              
-                        string rNum = Console.ReadLine();                
+                        string rNum = Console.ReadLine();// Read room number input from user                
 
                         Console.Write("Enter Room Type: ");                 
                         string rType = Console.ReadLine();          
