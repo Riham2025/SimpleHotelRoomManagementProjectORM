@@ -83,7 +83,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         public void CancelBooking(int bookingId)
         {
             var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
-            if (booking == null)
+            if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found.");
 
             _bookingRepository.Delete(bookingId);
