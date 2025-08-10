@@ -100,22 +100,22 @@ namespace SimpleHotelRoomManagementProjectORM
                         Console.Write("Enter Guest ID: ");
                         string guestIdInput = Console.ReadLine();
                         int guestId;
-                        if (!int.TryParse(guestIdInput, out guestId))
+                        if (!int.TryParse(guestIdInput, out guestId)) // Parse guest ID input to integer
                         {
                             Console.WriteLine(" Invalid Guest ID.");
                             break;
                         }
 
-                        Console.Write("Enter Check-in Date (yyyy-mm-dd): ");
+                        Console.Write("Enter Check-in Date (yyyy-mm-dd): "); // Read check-in date input from user
                         string inInput = Console.ReadLine();
                         DateTime checkIn;
                         if (!DateTime.TryParse(inInput, out checkIn))
                         {
-                            Console.WriteLine(" Invalid Check-in date.");
+                            Console.WriteLine(" Invalid Check-in date."); // Invalid input for check-in date
                             break;
                         }
 
-                        Console.Write("Enter Check-out Date (yyyy-mm-dd): ");
+                        Console.Write("Enter Check-out Date (yyyy-mm-dd): "); // Read check-out date input from user
                         string outInput = Console.ReadLine();
                         DateTime checkOut;
                         if (!DateTime.TryParse(outInput, out checkOut))
