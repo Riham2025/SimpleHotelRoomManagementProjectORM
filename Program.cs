@@ -93,7 +93,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         int roomId;
                         if (!int.TryParse(roomIdInput, out roomId)) // Parse room ID input to integer
                         {
-                            Console.WriteLine(" Invalid Room ID.");
+                            Console.WriteLine(" Invalid Room ID."); // Invalid input for room ID
                             break;
                         }
 
