@@ -29,5 +29,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         // Additional properties can be added as needed
         public DateTime CheckInDate { get; set; } // Check-in date for the booking
+
+        public DateTime CheckOutDate { get; set; } // Check-out date for the booking
     }
 }
