@@ -108,7 +108,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false;
             }
 
-            // 
+            // 3) Apply changes
             existing.Rating = newRating;
             existing.Comment = string.IsNullOrWhiteSpace(newComment) ? null : newComment.Trim();
 
