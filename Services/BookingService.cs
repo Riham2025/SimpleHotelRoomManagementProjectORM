@@ -44,7 +44,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
             // Check for overlapping bookings
             var existingBookings = _bookingRepository.GetAll() // Retrieve all existing bookings
-                .Where(b => b.RoomId == roomId && 
+                .Where(b => b.RoomId == roomId &&
                             ((checkIn >= b.CheckIn && checkIn < b.CheckOut) || // Check if new check-in overlaps with existing bookings
                              (checkOut > b.CheckIn && checkOut <= b.CheckOut) || // Check if new check-out overlaps with existing bookings
                              (checkIn <= b.CheckIn && checkOut >= b.CheckOut))) // Check if new booking completely overlaps with existing bookings
@@ -54,7 +54,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 throw new Exception("Room is already booked for the selected dates."); // Fail if room is already booked
 
             // Create new booking object
-            Booking newBooking = new Booking 
+            Booking newBooking = new Booking
             {
                 GuestId = guestId, // Set the guest ID
                 RoomId = roomId, // Set the room ID
@@ -87,6 +87,18 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 throw new Exception("Booking not found."); // Fail if booking does not exist
 
             _bookingRepository.Delete(bookingId); // Delete the booking by ID
+        }
+
+        // Update booking dates
+        public void UpdateBookingDates(int bookingId, DateTime newCheckIn, DateTime newCheckOut)
+        {
+            var booking = _bookingRepository.GetById(bookingId);
+            if (booking == null)
+                throw new Exception("Booking not found.");
+
+            if (newCheckIn >= newCheckOut)
+                throw new Exception("Check-out date must be after check-in date.");
+
         }
     }
 }
