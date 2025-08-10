@@ -118,7 +118,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         Console.Write("Enter Check-out Date (yyyy-mm-dd): "); // Read check-out date input from user
                         string outInput = Console.ReadLine();
                         DateTime checkOut;
-                        if (!DateTime.TryParse(outInput, out checkOut))
+                        if (!DateTime.TryParse(outInput, out checkOut)) // Parse check-out date input to DateTime
                         {
                             Console.WriteLine(" Invalid Check-out date.");
                             break;
