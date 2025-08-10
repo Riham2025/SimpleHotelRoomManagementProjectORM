@@ -11,7 +11,10 @@ namespace SimpleHotelRoomManagementProjectORM.Services
     {
 
         // Reference to review data-access
-        private readonly IReviewRepository _reviewRepo; 
+        private readonly IReviewRepository _reviewRepo;
+
+        private readonly IBookingRepository _bookingRepo;// To access bookings for reviews
+
 
     }
 }
