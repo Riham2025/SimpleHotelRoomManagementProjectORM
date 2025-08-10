@@ -18,7 +18,7 @@ namespace SimpleHotelRoomManagementProjectORM
 
 
             RoomService roomService = new RoomService(roomRepo);// Room service (business logic for rooms)
-            GuestService guestService = new GuestService(guestRepo); 
+            GuestService guestService = new GuestService(guestRepo); // Guest service (business logic for guests)
             BookingService bookingService = new BookingService(bookingRepo, roomRepo, guestRepo); 
             ReviewService reviewService = new ReviewService(reviewRepo, bookingRepo, guestRepo); 
 
