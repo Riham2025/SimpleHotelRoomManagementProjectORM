@@ -9,7 +9,8 @@ using SimpleHotelRoomManagementProjectORM.Repository;
 
 namespace SimpleHotelRoomManagementProjectORM.Services
 {
-    public class BookingService
+    // Implements IBookingService to handle booking operations
+    public class BookingService : IBookingService
     {
 
         private readonly IBookingRepository _bookingRepository;  // To interact with booking data storage
@@ -80,7 +81,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         }
 
         // Cancel booking
-        public void CancelBooking(int bookingId) 
+        public void CancelBooking(int bookingId)
         {
             var booking = _bookingRepository.GetById(bookingId); // Retrieve booking by ID
             if (booking == null) // Check if booking exists
@@ -96,7 +97,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             if (booking == null) // Check if booking exists
                 throw new Exception("Booking not found."); // Fail if booking does not exist
 
-            if (newCheckIn >= newCheckOut) 
+            if (newCheckIn >= newCheckOut)
                 throw new Exception("Check-out date must be after check-in date."); // Fail if dates are invalid
 
             // Check for overlapping bookings excluding current booking
