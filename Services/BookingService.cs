@@ -53,13 +53,13 @@ namespace SimpleHotelRoomManagementProjectORM.Services
 
 
 
-            // Create new booking object
-            Booking newBooking = new Booking
+            // Create new booking object using the correct property names
+            var newBooking = new Booking
             {
-                GuestId = guestId, // Set the guest ID
-                RoomId = roomId, // Set the room ID
-                CheckIn = checkIn, // Set the check-in date
-                CheckOut = checkOut // Set the check-out date
+                GuestId = guestId, // Associate booking with guest
+                RoomId = roomId, // Associate booking with room
+                CheckInDate = checkIn, // Set check-in date
+                CheckOutDate = checkOut
             };
 
             // Save booking
