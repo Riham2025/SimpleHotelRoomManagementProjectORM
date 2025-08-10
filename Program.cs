@@ -84,7 +84,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         if (guestOk)
                             Console.WriteLine(" Guest registered successfully!"); // Guest registration successful
                         else
-                            Console.WriteLine($" Error: {guestError}");
+                            Console.WriteLine($" Error: {guestError}"); // Display error if guest registration failed
                         break;
 
                     case "3":  // MAKE BOOKING
