@@ -82,7 +82,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         bool guestOk = guestService.RegisterGuest(gName, gEmail, out guestError); // Register a new guest using the service
 
                         if (guestOk)
-                            Console.WriteLine(" Guest registered successfully!");
+                            Console.WriteLine(" Guest registered successfully!"); // Guest registration successful
                         else
                             Console.WriteLine($" Error: {guestError}");
                         break;
