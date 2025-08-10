@@ -49,7 +49,7 @@ namespace SimpleHotelRoomManagementProjectORM
                         string rNum = Console.ReadLine();// Read room number input from user                
 
                         Console.Write("Enter Room Type: ");                 
-                        string rType = Console.ReadLine();          
+                        string rType = Console.ReadLine(); // Read room type input from user        
 
                         Console.Write("Enter Daily Rate: ");          
                         string rateInput = Console.ReadLine();              
