@@ -46,7 +46,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 return false; // fail fast
             }
 
-            // 
+            // 2) Validate rating range (1..5)
             if (rating < 1 || rating > 5)
             {
                 error = "Rating must be between 1 and 5.";
