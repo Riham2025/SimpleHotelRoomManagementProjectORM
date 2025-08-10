@@ -140,7 +140,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             return true; // success
         }
 
-        // 
+        // Return all reviews (pass-through)
         public List<Review> GetAllReviews()
         {
             return _reviewRepo.GetAllReviews();
