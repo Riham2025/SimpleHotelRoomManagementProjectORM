@@ -62,6 +62,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 CheckOut = checkOut // Set the check-out date
             };
 
+            // Save booking
+            _bookingRepository.Add(newBooking);
+
         }
     }
 }
