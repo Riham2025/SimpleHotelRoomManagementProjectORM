@@ -57,7 +57,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             Booking newBooking = new Booking 
             {
                 GuestId = guestId, // Set the guest ID
-                RoomId = roomId,
+                RoomId = roomId, // Set the room ID
                 CheckIn = checkIn,
                 CheckOut = checkOut
             };
