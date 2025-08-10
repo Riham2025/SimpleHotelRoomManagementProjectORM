@@ -50,7 +50,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 .ToList();// Convert to list
 
             if (existingBookings.Any()) // If there are any overlapping bookings
-                throw new Exception("Room is already booked for the selected dates.");
+                throw new Exception("Room is already booked for the selected dates."); // Fail if room is already booked
 
         }
     }
