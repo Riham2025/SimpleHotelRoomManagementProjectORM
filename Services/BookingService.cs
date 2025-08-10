@@ -104,7 +104,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
                 .Where(b => b.RoomId == booking.RoomId && // Check if booking is for the same room
                             b.BookingId != bookingId && // Exclude current booking
                             ((newCheckIn >= b.CheckIn && newCheckIn < b.CheckOut) || // Check if new check-in overlaps with existing bookings
-                             (newCheckOut > b.CheckIn && newCheckOut <= b.CheckOut) ||
+                             (newCheckOut > b.CheckIn && newCheckOut <= b.CheckOut) || // Check if new check-out overlaps with existing bookings
                              (newCheckIn <= b.CheckIn && newCheckOut >= b.CheckOut)))
                 .ToList();
 
