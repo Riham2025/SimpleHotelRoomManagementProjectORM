@@ -88,10 +88,10 @@ namespace SimpleHotelRoomManagementProjectORM
                         break;
 
                     case "3":  // MAKE BOOKING
-                        Console.Write("Enter Room ID: ");
-                        string roomIdInput = Console.ReadLine();
+                        Console.Write("Enter Room ID: "); // Read room ID input from user
+                        string roomIdInput = Console.ReadLine(); // Read room ID input from user
                         int roomId;
-                        if (!int.TryParse(roomIdInput, out roomId))
+                        if (!int.TryParse(roomIdInput, out roomId)) // Parse room ID input to integer
                         {
                             Console.WriteLine(" Invalid Room ID.");
                             break;
