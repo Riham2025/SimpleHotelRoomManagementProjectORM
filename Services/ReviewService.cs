@@ -97,12 +97,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var existing = _reviewRepo.GetReviewById(reviewId); // Get the review by ID
             if (existing == null) // Check if review exists
             {
-                error = "Review not found.";
+                error = "Review not found."; // Fail fast
                 return false;
             }
 
             // 2) Validate rating range
-            if (newRating < 1 || newRating > 5)
+            if (newRating < 1 || newRating > 5) // Check if rating is valid
             {
                 error = "Rating must be between 1 and 5.";
                 return false;
