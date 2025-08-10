@@ -24,5 +24,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
         // Navigation property to related bookings
         public ICollection<Booking> Bookings { get; set; } // List of bookings associated with this room
 
+        // Additional properties can be added as needed
+
     }
 }
