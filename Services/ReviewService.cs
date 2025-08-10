@@ -104,12 +104,12 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // 2) Validate rating range
             if (newRating < 1 || newRating > 5) // Check if rating is valid
             {
-                error = "Rating must be between 1 and 5.";
+                error = "Rating must be between 1 and 5."; // Fail fast
                 return false;
             }
 
             // 3) Apply changes
-            existing.Rating = newRating;
+            existing.Rating = newRating; // Update the rating
             existing.Comment = string.IsNullOrWhiteSpace(newComment) ? null : newComment.Trim();
 
             // 4) Persist
