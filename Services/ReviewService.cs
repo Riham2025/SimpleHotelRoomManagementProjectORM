@@ -76,7 +76,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             var review = new Review
             {
                 GuestId = guestId,                  // link to the author
-                Rating = rating,                   // 
+                Rating = rating,                   // validated 1..5
                 Comment = string.IsNullOrWhiteSpace(comment) ? null : comment.Trim()
                 
             };
