@@ -64,7 +64,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             };
 
             // Save booking
-            _bookingRepository.Add(newBooking);
+            _bookingRepository.AddBooking(newBooking);
 
         }
 
