@@ -75,7 +75,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
             // 5) Create entity (trim the comment; allow nulls)
             var review = new Review
             {
-                GuestId = guestId,                  // 
+                GuestId = guestId,                  // link to the author
                 Rating = rating,                   // 
                 Comment = string.IsNullOrWhiteSpace(comment) ? null : comment.Trim()
                 
