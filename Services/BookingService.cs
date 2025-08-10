@@ -72,5 +72,11 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             return _bookingRepository.GetAll(); // Retrieve all bookings from the repository
         }
+
+        // Get booking by ID
+        public Booking GetBookingById(int bookingId)
+        {
+            return _bookingRepository.GetById(bookingId);
+        }
     }
 }
