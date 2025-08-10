@@ -38,7 +38,7 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         {
             error = string.Empty; // initialize error
 
-            // 
+            // 1) Validate guest existence
             var guest = _guestRepo.GetGuestById(guestId);
             if (guest == null)
             {
