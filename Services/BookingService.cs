@@ -17,5 +17,9 @@ namespace SimpleHotelRoomManagementProjectORM.Services
         // Constructor for dependency injection
         public BookingService(IBookingRepository bookingRepo, IRoomRepository roomRepo, IGuestRepository guestRepo)
         {
+            _bookingRepository = bookingRepo; // Store the booking repository
+            _roomRepository = roomRepo; //
+            _guestRepository = guestRepo; // 
         }
+    }
 }
