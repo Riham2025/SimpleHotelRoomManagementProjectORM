@@ -26,5 +26,7 @@ namespace SimpleHotelRoomManagementProjectORM.Models
 
         // Additional properties can be added as needed
 
+        public string Type { get; set; } // Type of room (e.g., "Single", "Double", "Suite")
+
     }
 }
